@@ -3,8 +3,6 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -15,6 +13,9 @@ import android.widget.Toast;
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

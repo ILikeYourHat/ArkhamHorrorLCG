@@ -11,9 +11,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +35,10 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract.CampaignEn
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamDbHelper;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
+
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

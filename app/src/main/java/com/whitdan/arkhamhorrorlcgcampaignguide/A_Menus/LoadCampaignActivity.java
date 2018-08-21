@@ -8,8 +8,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +30,9 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract.NightEntry
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamDbHelper;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 /*
     LoadCampaignActivity - Activity displaying a list of all saved campaigns, on clicking one of them it loads the
@@ -259,7 +260,7 @@ public class LoadCampaignActivity extends AppCompatActivity {
                             currentScenarioName.setText(R.string.forgotten_interlude_three);
                             break;
                         case 12:
-                            currentScenarioName.setText(R.string.forgotten_scenario_five);
+                            currentScenarioName.setText(R.string.forgotten_scenario_five_a); // TODO
                             break;
                         case 13:
                             currentScenarioName.setText(R.string.forgotten_scenario_six);

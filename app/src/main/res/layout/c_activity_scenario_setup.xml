@@ -282,7 +282,7 @@
                     android:textSize="@dimen/arnopro_textsize"/>
             </LinearLayout>
 
-            <android.support.v4.widget.Space
+            <Space
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginTop="@dimen/activity_vertical_margin"

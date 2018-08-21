@@ -10,9 +10,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -39,6 +36,10 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+
+import androidx.annotation.IdRes;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

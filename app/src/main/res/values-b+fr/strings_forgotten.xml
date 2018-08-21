@@ -157,10 +157,10 @@
 	
 	 <string name="threads_skull_one">–X. X est le plus grand nombre de fatalités sur un ennemi <b><i>Cultiste</i></b>.</string>
     <string name="threads_skull_two">–X. X est le nombre de fatalités en jeu.</string>
-    <string name="threads_cultist_one">–2. Si vous ne réussissez pas avec une différence d'au moins 1, subissez 1 blessure.</string>
-    <string name="threads_cultist_two">–2. Si vous ne réussissez pas avec une différence d'au moins 2, subissez 1 blessure directe.</string>
-    <string name="threads_tablet_one">–2. Si vous ne réussissez pas avec une différence d'au moins 1, placez 1 fatalité sur l'ennemi <b><i>Cultiste</i></b> le plus proche.</string>
-    <string name="threads_tablet_two">–2. Si vous ne réussissez pas avec une différence d'au moins 2, placez 1 fatalité sur chaque ennemi <b><i>Cultiste</i></b>.</string>
+    <string name="threads_cultist_one">–2. Si vous ne réussissez pas avec une différence d\'au moins 1, subissez 1 blessure.</string>
+    <string name="threads_cultist_two">–2. Si vous ne réussissez pas avec une différence d\'au moins 2, subissez 1 blessure directe.</string>
+    <string name="threads_tablet_one">–2. Si vous ne réussissez pas avec une différence d\'au moins 1, placez 1 fatalité sur l\'ennemi <b><i>Cultiste</i></b> le plus proche.</string>
+    <string name="threads_tablet_two">–2. Si vous ne réussissez pas avec une différence d\'au moins 2, placez 1 fatalité sur chaque ennemi <b><i>Cultiste</i></b>.</string>
     <string name="threads_thing_one">–2. Si vous échouez, perdez 1 de vos indices.</string>
     <string name="threads_thing_two">–3. Si vous échouez, perdez 1 de vos indices.</string>
 

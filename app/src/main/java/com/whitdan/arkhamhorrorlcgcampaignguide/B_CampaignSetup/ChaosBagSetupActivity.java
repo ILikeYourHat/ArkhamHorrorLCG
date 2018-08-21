@@ -3,7 +3,6 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +20,8 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 

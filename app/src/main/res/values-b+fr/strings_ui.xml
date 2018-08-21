@@ -225,7 +225,7 @@
     <string name="voice_of_the_messenger_text">Traumatisme subi par la Voix du Messager :</string>
 	<string name="doomed">Le destin approche</string>
     <string name="doomed_log">Le destin approche.\n\n</string>
-    <string name="accursed_fate">L'heure est sombre</string>
-    <string name="accursed_fate_log">L'heure est sombre.\n\n</string>
-    <string name="bell_tolls">L'heure de votre trépas a sonné</string>
+    <string name="accursed_fate">L\'heure est sombre</string>
+    <string name="accursed_fate_log">L\'heure est sombre.\n\n</string>
+    <string name="bell_tolls">L\'heure de votre trépas a sonné</string>
 </resources>

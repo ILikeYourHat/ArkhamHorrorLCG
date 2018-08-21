@@ -3,7 +3,6 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +16,8 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.ChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -679,10 +680,10 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         break;
                     case 8:
                         sets.setText(R.string.threads_sets);
-                        setsImage.setImageResource(R.drawable.threads_sets);
+//                        setsImage.setImageResource(R.drawable.threads_sets); // TODO
                         locations.setText(R.string.threads_locations);
                         locationPlacement.setVisibility(VISIBLE);
-                        locationPlacement.setImageResource(R.drawable.threads_locations);
+//                        locationPlacement.setImageResource(R.drawable.threads_locations); //TODO
                         setAside.setText(R.string.threads_set_aside);
                         if(globalVariables.Custody == 2){
                             if(globalVariables.IchtacasTale == 1){
@@ -704,18 +705,18 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                     case 10:
                         if(globalVariables.IchtacasTale == 1 && globalVariables.IchtacasTale == 1){
                             sets.setText(R.string.boundary_sets_one);
-                            setsImage.setImageResource(R.drawable.boundary_sets_one);
+//                            setsImage.setImageResource(R.drawable.boundary_sets_one); // TODO
                         } else if(globalVariables.Ichtaca == 2 && globalVariables.Custody == 1 && globalVariables
                                 .IchtacasTale != 4){
                             sets.setText(R.string.boundary_sets_two);
-                            setsImage.setImageResource(R.drawable.boundary_sets_two);
+//                            setsImage.setImageResource(R.drawable.boundary_sets_two); // TODO
                         } else {
                             sets.setText(R.string.boundary_sets_three);
-                            setsImage.setImageResource(R.drawable.boundary_sets_three);
+//                            setsImage.setImageResource(R.drawable.boundary_sets_three); // TODO
                         }
                         locations.setText(R.string.boundary_locations);
                         locationPlacement.setVisibility(VISIBLE);
-                        locationPlacement.setImageResource(R.drawable.boundary_locations);
+//                        locationPlacement.setImageResource(R.drawable.boundary_locations); // TODO
                         setAside.setText(R.string.boundary_set_aside);
                         additional.setText(R.string.boundary_additional);
                         additionalTwo.setVisibility(VISIBLE);

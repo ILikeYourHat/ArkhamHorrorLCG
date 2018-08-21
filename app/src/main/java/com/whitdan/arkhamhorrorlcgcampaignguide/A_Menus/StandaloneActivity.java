@@ -3,13 +3,14 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioIntroductionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class StandaloneActivity extends AppCompatActivity {
 
