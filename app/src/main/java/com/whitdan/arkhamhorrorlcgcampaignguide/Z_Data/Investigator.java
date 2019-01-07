@@ -2,27 +2,27 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data;
 
 public class Investigator {
 
-    public Investigator(InvestigatorCharacter investigator, String name, String deckName, String deck) {
-        setupInvestigator(investigator);
-        this.PlayerName = name;
+    public Investigator(InvestigatorCard card, String playerName, String deckName, String deck) {
+        setupInvestigator(card);
+        this.PlayerName = playerName;
         this.DeckName = deckName;
         this.Decklist = deck;
     }
 
-    private void setupInvestigator(InvestigatorCharacter investigator) {
-        this.name = investigator;
-        this.Health = name.getHealth();
-        this.Sanity = name.getSanity();
+    private void setupInvestigator(InvestigatorCard investigator) {
+        this.card = investigator;
+        this.Health = card.getHealth();
+        this.Sanity = card.getSanity();
         this.Status = 1;
         this.Damage = 0;
         this.Horror = 0;
-        this.TotalXP = name.getStartingXP();
+        this.TotalXP = card.getStartingXP();
         this.AvailableXP = this.TotalXP;
         this.SpentXP = 0;
     }
 
     // Basic attributes for all investigators
-    public InvestigatorCharacter name;
+    public InvestigatorCard card;
     public int Health;
     public int Sanity;
     public int Status;          // 0 = not in use, 1 = in use, 2 = dead, 3 = saved

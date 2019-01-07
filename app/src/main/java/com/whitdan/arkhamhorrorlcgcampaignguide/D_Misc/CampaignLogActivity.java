@@ -11,7 +11,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.EditLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
-import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -515,7 +515,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOneReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_one_read_act));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvOneReadAct));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvOneReadAct));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
@@ -524,7 +524,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_two_read_act));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvTwoReadAct));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvTwoReadAct));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
@@ -533,7 +533,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreeReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_three_read_act));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvThreeReadAct));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvThreeReadAct));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
@@ -542,7 +542,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_four_read_act));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvFourReadAct));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvFourReadAct));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
@@ -581,7 +581,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOnePossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_one_possessed));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvOnePossessed));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvOnePossessed));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
@@ -590,7 +590,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoPossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_two_possessed));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvTwoPossessed));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvTwoPossessed));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
@@ -599,7 +599,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreePossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_three_possessed));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvThreePossessed));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvThreePossessed));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
@@ -608,7 +608,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourPossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_four_possessed));
                     } else {
-                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvFourPossessed));
+                        String name = getString(InvestigatorCard.getNameById(globalVariables.InvFourPossessed));
                         carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
@@ -724,7 +724,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                 if(i > 0){
                     suppliesBuilder.append("\n");
                 }
-                suppliesBuilder.append(getString(globalVariables.Investigators.get(i).name.getName()));
+                suppliesBuilder.append(getString(globalVariables.Investigators.get(i).card.getName()));
                 suppliesBuilder.append("\n");
 
                 boolean supplies = false;

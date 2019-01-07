@@ -4,7 +4,7 @@ import androidx.annotation.StringRes;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 
-public enum InvestigatorCharacter {
+public enum InvestigatorCard {
     NONE(0, 0, 0, 0),
     ROLAND_BANKS(R.string.roland_banks, 9, 5, 0),
     DAISY_WALKER(R.string.daisy_walker, 5, 9, 0),
@@ -38,7 +38,7 @@ public enum InvestigatorCharacter {
     private final int sanity;
     private final int startingXP;
 
-    InvestigatorCharacter(
+    InvestigatorCard(
             @StringRes int name,
             int health,
             int sanity,

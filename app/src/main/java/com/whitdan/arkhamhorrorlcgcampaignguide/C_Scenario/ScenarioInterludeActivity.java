@@ -225,19 +225,19 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
                             if (globalVariables.Investigators.get(i).Supplies % 3 == 0) {
                                 blanket.append("\t");
-                                blanket.append(getString(globalVariables.Investigators.get(i).name.getName()));
+                                blanket.append(getString(globalVariables.Investigators.get(i).card.getName()));
                                 blanket.append("\n");
                                 blanketCount++;
                             } else {
                                 noBlanket.append("\t");
-                                noBlanket.append(getString(globalVariables.Investigators.get(i).name.getName()));
+                                noBlanket.append(getString(globalVariables.Investigators.get(i).card.getName()));
                                 noBlanket.append("\n");
                                 noBlanketCount++;
 
                                 View noBlanketHeading = View.inflate(this, R.layout.e_item_heading, null);
                                 TextView noBlanketHeadingText = noBlanketHeading.findViewById(R.id.heading);
                                 noBlanketHeadingText.setText(globalVariables.Investigators.get(i)
-                                        .name.getName());
+                                        .card.getName());
                                 noBlanketHeadingText.setTypeface(teutonic);
                                 interludeLayout.addView(noBlanketHeading, lp);
 
@@ -331,7 +331,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             case 4:
                                 introductionOptionFour.setVisibility(VISIBLE);
                                 String investigatorFour = getString(globalVariables.Investigators.get(3)
-                                        .name.getName());
+                                        .card.getName());
                                 if (globalVariables.Investigators.get(3).Supplies % 17 == 0) {
                                     investigatorFour = investigatorFour + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -340,7 +340,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             case 3:
                                 introductionOptionThree.setVisibility(VISIBLE);
                                 String investigatorThree = getString(globalVariables.Investigators.get(2)
-                                        .name.getName());
+                                        .card.getName());
                                 if (globalVariables.Investigators.get(2).Supplies % 17 == 0) {
                                     investigatorThree = investigatorThree + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -349,7 +349,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             case 2:
                                 introductionOptionTwo.setVisibility(VISIBLE);
                                 String investigatorTwo = getString(globalVariables.Investigators.get(1)
-                                        .name.getName());
+                                        .card.getName());
                                 if (globalVariables.Investigators.get(1).Supplies % 17 == 0) {
                                     investigatorTwo = investigatorTwo + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -358,7 +358,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             case 1:
                                 introductionOptionOne.setVisibility(VISIBLE);
                                 String investigatorOne = getString(globalVariables.Investigators.get(0)
-                                        .name.getName());
+                                        .card.getName());
                                 if (globalVariables.Investigators.get(0).Supplies % 17 == 0) {
                                     investigatorOne = investigatorOne + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -492,7 +492,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 invFour.setVisibility(VISIBLE);
-                                invFourBox.setText(globalVariables.Investigators.get(3).name.getName());
+                                invFourBox.setText(globalVariables.Investigators.get(3).card.getName());
                                 invFourBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -512,7 +512,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 3:
                                 invThree.setVisibility(VISIBLE);
-                                invThreeBox.setText(globalVariables.Investigators.get(2).name.getName());
+                                invThreeBox.setText(globalVariables.Investigators.get(2).card.getName());
                                 invThreeBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -532,7 +532,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 2:
                                 invTwo.setVisibility(VISIBLE);
-                                invTwoBox.setText(globalVariables.Investigators.get(1).name.getName());
+                                invTwoBox.setText(globalVariables.Investigators.get(1).card.getName());
                                 invTwoBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -552,7 +552,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 1:
                                 invOne.setVisibility(VISIBLE);
-                                invOneBox.setText(globalVariables.Investigators.get(0).name.getName());
+                                invOneBox.setText(globalVariables.Investigators.get(0).card.getName());
                                 invOneBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -776,7 +776,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 invFour.setVisibility(VISIBLE);
-                                invFourBoxTwo.setText(globalVariables.Investigators.get(3).name.getName());
+                                invFourBoxTwo.setText(globalVariables.Investigators.get(3).card.getName());
                                 invFourBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -797,7 +797,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 3:
                                 invThree.setVisibility(VISIBLE);
-                                invThreeBoxTwo.setText(globalVariables.Investigators.get(2).name.getName());
+                                invThreeBoxTwo.setText(globalVariables.Investigators.get(2).card.getName());
                                 invThreeBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -817,7 +817,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 2:
                                 invTwo.setVisibility(VISIBLE);
-                                invTwoBoxTwo.setText(globalVariables.Investigators.get(1).name.getName());
+                                invTwoBoxTwo.setText(globalVariables.Investigators.get(1).card.getName());
                                 invTwoBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -838,7 +838,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 1:
                                 invOne.setVisibility(VISIBLE);
-                                invOneBoxTwo.setText(globalVariables.Investigators.get(0).name.getName());
+                                invOneBoxTwo.setText(globalVariables.Investigators.get(0).card.getName());
                                 invOneBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -875,12 +875,12 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             if (globalVariables.Investigators.get(i).Supplies % 5 == 0 ||
                                     globalVariables.Investigators.get(i).ResuppliesOne % 5 == 0) {
                                 canteen.append("\t");
-                                canteen.append(getString(globalVariables.Investigators.get(i).name.getName()));
+                                canteen.append(getString(globalVariables.Investigators.get(i).card.getName()));
                                 canteen.append("\n");
                                 canteenCount++;
                             } else {
                                 noCanteen.append("\t");
-                                noCanteen.append(getString(globalVariables.Investigators.get(i).name.getName()));
+                                noCanteen.append(getString(globalVariables.Investigators.get(i).card.getName()));
                                 noCanteen.append("\n");
                                 noCanteenCount++;
                             }

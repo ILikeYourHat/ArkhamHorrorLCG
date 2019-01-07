@@ -15,7 +15,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.ChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
-import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -410,7 +410,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         setsImage.setImageResource(R.drawable.curtain_sets);
                         boolean lola = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            if (globalVariables.Investigators.get(i).name == InvestigatorCharacter.LOLA_HAYES) {
+                            if (globalVariables.Investigators.get(i).card == InvestigatorCard.LOLA_HAYES) {
                                 lola = true;
                             }
                         }
@@ -618,7 +618,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         additional.setText(R.string.untamed_additional);
                         boolean untamedLeader = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            switch (globalVariables.Investigators.get(i).name) {
+                            switch (globalVariables.Investigators.get(i).card) {
                                 case URSULA_DOWNS:
                                 case LEO_ANDERSON:
                                     untamedLeader = true;
@@ -638,7 +638,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         additional.setText(R.string.eztli_additional);
                         boolean eztliLeader = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            switch (globalVariables.Investigators.get(i).name) {
+                            switch (globalVariables.Investigators.get(i).card) {
                                 case URSULA_DOWNS:
                                 case LEO_ANDERSON:
                                     eztliLeader = true;

@@ -29,7 +29,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamDbHelper;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
-import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCard;
 
 import java.util.ArrayList;
 
@@ -156,7 +156,7 @@ public class CampaignFinishedActivity extends AppCompatActivity {
 
                 // Set investigator name
                 TextView investigatorNameView = listItemView.findViewById(R.id.investigator_name);
-                String name = getString(currentInvestigator.name.getName()) + " ";
+                String name = getString(currentInvestigator.card.getName()) + " ";
                 investigatorNameView.setText(name);
                 investigatorNameView.setTypeface(teutonic);
                 String playerName = " ";
@@ -375,7 +375,7 @@ public class CampaignFinishedActivity extends AppCompatActivity {
                         globalVariables.CurrentCampaign = 3;
                         boolean lola = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            if (globalVariables.Investigators.get(i).name == InvestigatorCharacter.LOLA_HAYES) {
+                            if (globalVariables.Investigators.get(i).card == InvestigatorCard.LOLA_HAYES) {
                                 lola = true;
                             }
                         }

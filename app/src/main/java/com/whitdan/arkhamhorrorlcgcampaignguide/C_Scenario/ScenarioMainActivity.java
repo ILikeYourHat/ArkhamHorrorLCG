@@ -320,7 +320,7 @@ public class ScenarioMainActivity extends AppCompatActivity {
 
                 // Set investigator name
                 TextView investigatorNameView = listItemView.findViewById(R.id.investigator_name);
-                String name = getString(currentInvestigator.name.getName()) + " ";
+                String name = getString(currentInvestigator.card.getName()) + " ";
                 investigatorNameView.setText(name);
                 investigatorNameView.setTypeface(teutonic);
                 String playerName = " ";
