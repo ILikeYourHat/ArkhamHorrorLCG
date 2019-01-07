@@ -1,57 +1,61 @@
 package com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data;
 
 public class Investigator {
-    // Integer values for each investigator
+
     public enum Name {
-        PLACEHOLDER,
-        ROLAND_BANKS,
-        DAISY_WALKER,
-        SKIDS_OTOOLE,
-        AGNES_BAKER,
-        WENDY_ADAMS,
-        ZOEY_SAMARAS,
-        REX_MURPHY,
-        JENNY_BARNES,
-        JIM_CULVER,
-        ASHCAN_PETE,
-        MARK_HARRIGAN,
-        MINH_THI_PHAN,
-        SEFINA_ROUSSEAU,
-        AKACHI_ONYELE,
-        WILLIAM_YORICK,
-        LOLA_HAYES,
-        MARIE_LAMBEAU,
-        NORMAN_WITHERS,
-        CAROLYN_FERN,
-        SILAS_MARSH,
-        LEO_ANDERSON,
-        URSULA_DOWNS,
-        FINN_EDWARDS,
-        FATHER_MATEO,
-        CALVIN_WRIGHT
+        NONE(0, 0, 0),
+        ROLAND_BANKS(9, 5, 0),
+        DAISY_WALKER(5, 9, 0),
+        SKIDS_OTOOLE(8,6,0),
+        AGNES_BAKER(6,8,0),
+        WENDY_ADAMS(7, 7, 0),
+        ZOEY_SAMARAS(9, 6, 0),
+        REX_MURPHY(6, 9, 0),
+        JENNY_BARNES(8, 7, 0),
+        JIM_CULVER(7, 8, 0),
+        ASHCAN_PETE(6, 5, 0),
+        MARK_HARRIGAN(9, 5, 0),
+        MINH_THI_PHAN(7, 7, 0),
+        SEFINA_ROUSSEAU(5, 9, 0),
+        AKACHI_ONYELE(6, 8, 0),
+        WILLIAM_YORICK(8,6 ,0),
+        LOLA_HAYES(6, 6, 0),
+        MARIE_LAMBEAU(6, 8, 0),
+        NORMAN_WITHERS(6, 8, 0),
+        CAROLYN_FERN(6, 9, 0),
+        SILAS_MARSH(9, 5, 0),
+        LEO_ANDERSON(8, 6, 0),
+        URSULA_DOWNS(7, 7, 0),
+        FINN_EDWARDS(7, 7, 0),
+        FATHER_MATEO(6, 8, 5),
+        CALVIN_WRIGHT(6, 6, 0);
+
+        private final int health;
+        private final int sanity;
+        private final int startingXP;
+
+        Name(int health, int sanity, int startingXP) {
+            this.health = health;
+            this.sanity = sanity;
+            this.startingXP = startingXP;
+        }
     }
 
-    // Sets maximum health and sanity values for the various investigators (correspond to the names in the string array)
-    // StartingXP sets the bonus XP available at start for an investigator (for applicable investigators)
-    private int[] health        = {0,9,5,8,6,7,9,6,8,7,6,9,7,5,6,8,6,6,6,6,9,8,7,7,6,6};
-    private int[] sanity        = {0,5,9,6,8,7,6,9,7,8,5,5,7,9,8,6,6,8,8,9,5,6,7,7,8,6};
-    private int[] startingXP    = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0};
-
-    public Investigator(Investigator.Name investigator, String name, String deckName, String deck){
+    public Investigator(Investigator.Name investigator, String name, String deckName, String deck) {
         setupInvestigator(investigator);
         this.PlayerName = name;
         this.DeckName = deckName;
         this.Decklist = deck;
     }
 
-    private void setupInvestigator(Investigator.Name investigator){
+    private void setupInvestigator(Investigator.Name investigator) {
         this.name = investigator;
-        this.Health = health[name.ordinal()];
-        this.Sanity = sanity[name.ordinal()];
+        this.Health = name.health;
+        this.Sanity = name.sanity;
         this.Status = 1;
         this.Damage = 0;
         this.Horror = 0;
-        this.TotalXP = startingXP[name.ordinal()];
+        this.TotalXP = name.startingXP;
         this.AvailableXP = this.TotalXP;
         this.SpentXP = 0;
     }
