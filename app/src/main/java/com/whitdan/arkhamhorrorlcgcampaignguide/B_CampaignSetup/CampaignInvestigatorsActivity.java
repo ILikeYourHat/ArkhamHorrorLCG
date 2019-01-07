@@ -713,14 +713,13 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             TextView investigatorTwoLink = findViewById(R.id.investigator_two_link);
             TextView investigatorThreeLink = findViewById(R.id.investigator_three_link);
             TextView investigatorFourLink = findViewById(R.id.investigator_four_link);
-            String[] investigatorNames = getResources().getStringArray(R.array.investigators);
             Typeface arnoprobold = Typeface.createFromAsset(getAssets(), "fonts/arnoprobold.otf");
             Typeface wolgast = Typeface.createFromAsset(getAssets(), "fonts/wolgast.otf");
             // For each investigator, set it visible or not, apply the right name to it, set the right typeface and
             // set a listener to the link
             if (investigators > 0) {
                 investigatorOne.setVisibility(VISIBLE);
-                String nameOne = investigatorNames[globalVariables.InvestigatorNames.get(0).ordinal()];
+                String nameOne = getString(globalVariables.InvestigatorNames.get(0).getName());
                 investigatorOneName.setText(nameOne);
                 investigatorOneName.setTypeface(arnoprobold);
                 investigatorOneLink.setTypeface(wolgast);
@@ -732,7 +731,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (investigators > 1) {
                 investigatorTwo.setVisibility(VISIBLE);
-                String nameTwo = investigatorNames[globalVariables.InvestigatorNames.get(1).ordinal()];
+                String nameTwo = getString(globalVariables.InvestigatorNames.get(1).getName());
                 investigatorTwoName.setText(nameTwo);
                 investigatorTwoName.setTypeface(arnoprobold);
                 investigatorTwoLink.setTypeface(wolgast);
@@ -744,7 +743,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (investigators > 2) {
                 investigatorThree.setVisibility(VISIBLE);
-                String nameThree = investigatorNames[globalVariables.InvestigatorNames.get(2).ordinal()];
+                String nameThree = getString(globalVariables.InvestigatorNames.get(2).getName());
                 investigatorThreeName.setText(nameThree);
                 investigatorThreeName.setTypeface(arnoprobold);
                 investigatorThreeLink.setTypeface(wolgast);
@@ -756,7 +755,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (investigators > 3) {
                 investigatorFour.setVisibility(VISIBLE);
-                String nameFour = investigatorNames[globalVariables.InvestigatorNames.get(3).ordinal()];
+                String nameFour = getString(globalVariables.InvestigatorNames.get(3).getName());
                 investigatorFourName.setText(nameFour);
                 investigatorFourName.setTypeface(arnoprobold);
                 investigatorFourLink.setTypeface(wolgast);
@@ -879,8 +878,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             setupUI(v, getActivity());
 
             // Get the name of the investigator
-            String[] investigatorNames = getResources().getStringArray(R.array.investigators);
-            String name = investigatorNames[globalVariables.InvestigatorNames.get(investigator).ordinal()];
+            String name = getString(globalVariables.InvestigatorNames.get(investigator).getName());
 
             // Get the relevant views and set fonts
             TextView nameText = v.findViewById(R.id.investigator_name);
@@ -1000,12 +998,11 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             TextView investigatorTwoLink = v.findViewById(R.id.investigator_two_player);
             TextView investigatorThreeLink = v.findViewById(R.id.investigator_three_player);
             TextView investigatorFourLink = v.findViewById(R.id.investigator_four_player);
-            String[] investigatorNames = getResources().getStringArray(R.array.investigators);
             // For each investigator, set it visible or not, apply the right name to it, set the right typeface and
             // set a listener to the link
             if (globalVariables.InvestigatorNames.size() > 0) {
                 investigatorOne.setVisibility(VISIBLE);
-                String nameOne = investigatorNames[globalVariables.InvestigatorNames.get(0).ordinal()];
+                String nameOne = getString(globalVariables.InvestigatorNames.get(0).getName());
                 String playerOne = globalVariables.PlayerNames[0];
                 investigatorOneName.setText(nameOne);
                 investigatorOneName.setTypeface(arnoprobold);
@@ -1017,7 +1014,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (globalVariables.InvestigatorNames.size() > 1) {
                 investigatorTwo.setVisibility(VISIBLE);
-                String nameTwo = investigatorNames[globalVariables.InvestigatorNames.get(1).ordinal()];
+                String nameTwo = getString(globalVariables.InvestigatorNames.get(1).getName());
                 String playerTwo = globalVariables.PlayerNames[1];
                 investigatorTwoName.setText(nameTwo);
                 investigatorTwoName.setTypeface(arnoprobold);
@@ -1029,7 +1026,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (globalVariables.InvestigatorNames.size() > 2) {
                 investigatorThree.setVisibility(VISIBLE);
-                String nameThree = investigatorNames[globalVariables.InvestigatorNames.get(2).ordinal()];
+                String nameThree = getString(globalVariables.InvestigatorNames.get(2).getName());
                 String playerThree = globalVariables.PlayerNames[2];
                 investigatorThreeName.setText(nameThree);
                 investigatorThreeName.setTypeface(arnoprobold);
@@ -1041,7 +1038,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
 
             if (globalVariables.InvestigatorNames.size() > 3) {
                 investigatorFour.setVisibility(VISIBLE);
-                String nameFour = investigatorNames[globalVariables.InvestigatorNames.get(3).ordinal()];
+                String nameFour = getString(globalVariables.InvestigatorNames.get(3).getName());
                 String playerFour = globalVariables.PlayerNames[3];
                 investigatorFourName.setText(nameFour);
                 investigatorFourName.setTypeface(arnoprobold);

@@ -98,8 +98,7 @@ public class ChooseSuppliesActivity extends AppCompatActivity {
             // Investigator name
             TextView name = selectSupplies.findViewById(R.id.investigator_name);
             name.setTypeface(teutonic);
-            String[] investigatorNames = getResources().getStringArray(R.array.investigators);
-            String invName = investigatorNames[globalVariables.Investigators.get(i).name.ordinal()] + " ";
+            String invName = getString(globalVariables.Investigators.get(i).name.getName()) + " ";
             name.setText(invName);
 
             // Available supply points

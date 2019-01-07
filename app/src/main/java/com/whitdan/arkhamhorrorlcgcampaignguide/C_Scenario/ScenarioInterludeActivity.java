@@ -214,7 +214,6 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                 }
                 break;
             case 4:
-                String[] investigatorNames = getResources().getStringArray(R.array.investigators);
                 switch (globalVariables.CurrentScenario) {
                     case 2:
                         StringBuilder blanket = new StringBuilder();
@@ -226,19 +225,19 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
                             if (globalVariables.Investigators.get(i).Supplies % 3 == 0) {
                                 blanket.append("\t");
-                                blanket.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
+                                blanket.append(getString(globalVariables.Investigators.get(i).name.getName()));
                                 blanket.append("\n");
                                 blanketCount++;
                             } else {
                                 noBlanket.append("\t");
-                                noBlanket.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
+                                noBlanket.append(getString(globalVariables.Investigators.get(i).name.getName()));
                                 noBlanket.append("\n");
                                 noBlanketCount++;
 
                                 View noBlanketHeading = View.inflate(this, R.layout.e_item_heading, null);
                                 TextView noBlanketHeadingText = noBlanketHeading.findViewById(R.id.heading);
-                                noBlanketHeadingText.setText(investigatorNames[globalVariables.Investigators.get(i)
-                                        .name.ordinal()]);
+                                noBlanketHeadingText.setText(globalVariables.Investigators.get(i)
+                                        .name.getName());
                                 noBlanketHeadingText.setTypeface(teutonic);
                                 interludeLayout.addView(noBlanketHeading, lp);
 
@@ -331,8 +330,8 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 introductionOptionFour.setVisibility(VISIBLE);
-                                String investigatorFour = investigatorNames[globalVariables.Investigators.get(3)
-                                        .name.ordinal()];
+                                String investigatorFour = getString(globalVariables.Investigators.get(3)
+                                        .name.getName());
                                 if (globalVariables.Investigators.get(3).Supplies % 17 == 0) {
                                     investigatorFour = investigatorFour + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -340,8 +339,8 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 introductionOptionFour.setText(investigatorFour);
                             case 3:
                                 introductionOptionThree.setVisibility(VISIBLE);
-                                String investigatorThree = investigatorNames[globalVariables.Investigators.get(2)
-                                        .name.ordinal()];
+                                String investigatorThree = getString(globalVariables.Investigators.get(2)
+                                        .name.getName());
                                 if (globalVariables.Investigators.get(2).Supplies % 17 == 0) {
                                     investigatorThree = investigatorThree + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -349,8 +348,8 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 introductionOptionThree.setText(investigatorThree);
                             case 2:
                                 introductionOptionTwo.setVisibility(VISIBLE);
-                                String investigatorTwo = investigatorNames[globalVariables.Investigators.get(1)
-                                        .name.ordinal()];
+                                String investigatorTwo = getString(globalVariables.Investigators.get(1)
+                                        .name.getName());
                                 if (globalVariables.Investigators.get(1).Supplies % 17 == 0) {
                                     investigatorTwo = investigatorTwo + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -358,8 +357,8 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 introductionOptionTwo.setText(investigatorTwo);
                             case 1:
                                 introductionOptionOne.setVisibility(VISIBLE);
-                                String investigatorOne = investigatorNames[globalVariables.Investigators.get(0)
-                                        .name.ordinal()];
+                                String investigatorOne = getString(globalVariables.Investigators.get(0)
+                                        .name.getName());
                                 if (globalVariables.Investigators.get(0).Supplies % 17 == 0) {
                                     investigatorOne = investigatorOne + " " + getResources().getString(R.string
                                             .restless_binoculars);
@@ -493,7 +492,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 invFour.setVisibility(VISIBLE);
-                                invFourBox.setText(investigatorNames[globalVariables.Investigators.get(3).name.ordinal()]);
+                                invFourBox.setText(globalVariables.Investigators.get(3).name.getName());
                                 invFourBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -513,7 +512,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 3:
                                 invThree.setVisibility(VISIBLE);
-                                invThreeBox.setText(investigatorNames[globalVariables.Investigators.get(2).name.ordinal()]);
+                                invThreeBox.setText(globalVariables.Investigators.get(2).name.getName());
                                 invThreeBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -533,7 +532,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 2:
                                 invTwo.setVisibility(VISIBLE);
-                                invTwoBox.setText(investigatorNames[globalVariables.Investigators.get(1).name.ordinal()]);
+                                invTwoBox.setText(globalVariables.Investigators.get(1).name.getName());
                                 invTwoBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -553,7 +552,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 1:
                                 invOne.setVisibility(VISIBLE);
-                                invOneBox.setText(investigatorNames[globalVariables.Investigators.get(0).name.ordinal()]);
+                                invOneBox.setText(globalVariables.Investigators.get(0).name.getName());
                                 invOneBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -777,7 +776,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 invFour.setVisibility(VISIBLE);
-                                invFourBoxTwo.setText(investigatorNames[globalVariables.Investigators.get(3).name.ordinal()]);
+                                invFourBoxTwo.setText(globalVariables.Investigators.get(3).name.getName());
                                 invFourBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -798,7 +797,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 3:
                                 invThree.setVisibility(VISIBLE);
-                                invThreeBoxTwo.setText(investigatorNames[globalVariables.Investigators.get(2).name.ordinal()]);
+                                invThreeBoxTwo.setText(globalVariables.Investigators.get(2).name.getName());
                                 invThreeBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -818,7 +817,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 2:
                                 invTwo.setVisibility(VISIBLE);
-                                invTwoBoxTwo.setText(investigatorNames[globalVariables.Investigators.get(1).name.ordinal()]);
+                                invTwoBoxTwo.setText(globalVariables.Investigators.get(1).name.getName());
                                 invTwoBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -839,7 +838,7 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                                 });
                             case 1:
                                 invOne.setVisibility(VISIBLE);
-                                invOneBoxTwo.setText(investigatorNames[globalVariables.Investigators.get(0).name.ordinal()]);
+                                invOneBoxTwo.setText(globalVariables.Investigators.get(0).name.getName());
                                 invOneBoxTwo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                                     @Override
                                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -876,12 +875,12 @@ public class ScenarioInterludeActivity extends AppCompatActivity {
                             if (globalVariables.Investigators.get(i).Supplies % 5 == 0 ||
                                     globalVariables.Investigators.get(i).ResuppliesOne % 5 == 0) {
                                 canteen.append("\t");
-                                canteen.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
+                                canteen.append(getString(globalVariables.Investigators.get(i).name.getName()));
                                 canteen.append("\n");
                                 canteenCount++;
                             } else {
                                 noCanteen.append("\t");
-                                noCanteen.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
+                                noCanteen.append(getString(globalVariables.Investigators.get(i).name.getName()));
                                 noCanteen.append("\n");
                                 noCanteenCount++;
                             }

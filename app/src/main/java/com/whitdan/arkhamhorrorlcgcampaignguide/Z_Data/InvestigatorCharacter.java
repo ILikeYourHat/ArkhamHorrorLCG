@@ -51,6 +51,11 @@ public enum InvestigatorCharacter {
     }
 
     @StringRes
+    public static int getNameById(int id) {
+        return values()[id].getName();
+    }
+
+    @StringRes
     public int getName() {
         return name;
     }

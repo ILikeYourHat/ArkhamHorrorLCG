@@ -35,7 +35,6 @@ import androidx.core.content.ContextCompat;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.whitdan.arkhamhorrorlcgcampaignguide.R.array.investigators;
 
 public class EditTeamActivity extends AppCompatActivity {
 
@@ -61,9 +60,6 @@ public class EditTeamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.e_activity_edit_team);
         globalVariables = (GlobalVariables) this.getApplication();
-
-        // Get array of the names of all of the game's investigators
-        String[] investigatorNames = getResources().getStringArray(investigators);
 
         investigatorsCount = 0;
         investigatorOne = null;
@@ -108,10 +104,10 @@ public class EditTeamActivity extends AppCompatActivity {
                 // Set the investigator name (if there's a player name add it in brackets to the end)
                 if (globalVariables.Investigators.get(i).PlayerName != null && globalVariables.Investigators.get(i)
                         .PlayerName.length() > 0) {
-                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).name.ordinal()] + " (" +
+                    investigatorName = getString(globalVariables.Investigators.get(i).name.getName()) + " (" +
                             globalVariables.Investigators.get(i).PlayerName + ")";
                 } else {
-                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).name.ordinal()];
+                    investigatorName = getString(globalVariables.Investigators.get(i).name.getName());
                 }
                 investigator.setText(investigatorName);
                 // Set the Id of the checkbox to the number of the investigator in the array
@@ -134,10 +130,10 @@ public class EditTeamActivity extends AppCompatActivity {
             // Set the investigator name (if there's a player name add it in brackets to the end)
             if (globalVariables.SavedInvestigators.get(i).PlayerName != null && globalVariables.SavedInvestigators
                     .get(i).PlayerName.length() > 0) {
-                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).name.ordinal()] + " (" +
+                investigatorName = getString(globalVariables.SavedInvestigators.get(i).name.getName()) + " (" +
                         globalVariables.SavedInvestigators.get(i).PlayerName + ")";
             } else {
-                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).name.ordinal()];
+                investigatorName = getString(globalVariables.SavedInvestigators.get(i).name.getName());
             }
             investigator.setText(investigatorName);
             // Set the Id of the checkbox to the number of the investigator in the array + 100
@@ -1044,7 +1040,6 @@ public class EditTeamActivity extends AppCompatActivity {
             TextView investigatorTwoLink = parent.findViewById(R.id.investigator_two_link);
             TextView investigatorThreeLink = parent.findViewById(R.id.investigator_three_link);
             TextView investigatorFourLink = parent.findViewById(R.id.investigator_four_link);
-            String[] investigatorNames = getResources().getStringArray(investigators);
 
             // Set fonts
             Typeface arnoprobold = Typeface.createFromAsset(getAssets(), "fonts/arnoprobold.otf");
@@ -1070,7 +1065,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorOne != null) {
                 investigatorOneLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorOne;
-                String nameOne = investigatorNames[currentInvestigator.name.ordinal()];
+                String nameOne = getString(currentInvestigator.name.getName());
                 investigatorOneName.setText(nameOne);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1080,7 +1075,7 @@ public class EditTeamActivity extends AppCompatActivity {
                 }
             } else if (investigatorsCount > 0) {
                 investigatorOneLayout.setVisibility(VISIBLE);
-                String nameOne = investigatorNames[globalVariables.InvestigatorNames.get(0).ordinal()];
+                String nameOne = getString(globalVariables.InvestigatorNames.get(0).getName());
                 investigatorOneName.setText(nameOne);
                 if (globalVariables.PlayerNames[0] != null) {
                     if (globalVariables.PlayerNames[0].length() > 0) {
@@ -1098,7 +1093,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorTwo != null) {
                 investigatorTwoLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorTwo;
-                String nameTwo = investigatorNames[currentInvestigator.name.ordinal()];
+                String nameTwo = getString(currentInvestigator.name.getName());
                 investigatorTwoName.setText(nameTwo);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1108,7 +1103,7 @@ public class EditTeamActivity extends AppCompatActivity {
                 }
             } else if (investigatorsCount > 1) {
                 investigatorTwoLayout.setVisibility(VISIBLE);
-                String nameTwo = investigatorNames[globalVariables.InvestigatorNames.get(1).ordinal()];
+                String nameTwo = getString(globalVariables.InvestigatorNames.get(1).getName());
                 investigatorTwoName.setText(nameTwo);
                 if (globalVariables.PlayerNames[1] != null) {
                     if (globalVariables.PlayerNames[1].length() > 0) {
@@ -1126,7 +1121,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorThree != null) {
                 investigatorThreeLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorThree;
-                String nameThree = investigatorNames[currentInvestigator.name.ordinal()];
+                String nameThree = getString(currentInvestigator.name.getName());
                 investigatorThreeName.setText(nameThree);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1136,7 +1131,7 @@ public class EditTeamActivity extends AppCompatActivity {
                 }
             } else if (investigatorsCount > 2) {
                 investigatorThreeLayout.setVisibility(VISIBLE);
-                String nameThree = investigatorNames[globalVariables.InvestigatorNames.get(2).ordinal()];
+                String nameThree = getString(globalVariables.InvestigatorNames.get(2).getName());
                 investigatorThreeName.setText(nameThree);
                 if (globalVariables.PlayerNames[2] != null) {
                     if (globalVariables.PlayerNames[2].length() > 0) {
@@ -1154,7 +1149,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorFour != null) {
                 investigatorFourLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorFour;
-                String nameFour = investigatorNames[currentInvestigator.name.ordinal()];
+                String nameFour = getString(currentInvestigator.name.getName());
                 investigatorFourName.setText(nameFour);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1164,7 +1159,7 @@ public class EditTeamActivity extends AppCompatActivity {
                 }
             } else if (investigatorsCount > 3) {
                 investigatorFourLayout.setVisibility(VISIBLE);
-                String nameFour = investigatorNames[globalVariables.InvestigatorNames.get(3).ordinal()];
+                String nameFour = getString(globalVariables.InvestigatorNames.get(3).getName());
                 investigatorFourName.setText(nameFour);
                 if (globalVariables.PlayerNames[3] != null) {
                     if (globalVariables.PlayerNames[3].length() > 0) {
@@ -1225,8 +1220,7 @@ public class EditTeamActivity extends AppCompatActivity {
             setupUI(v, getActivity());
 
             // Get the name of the investigator
-            String[] investigatorNames = getResources().getStringArray(investigators);
-            String name = investigatorNames[globalVariables.InvestigatorNames.get(investigator).ordinal()];
+            String name = getString(globalVariables.InvestigatorNames.get(investigator).getName());
 
             // Get the relevant views and set fonts
             TextView nameText = v.findViewById(R.id.investigator_name);

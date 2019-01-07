@@ -43,7 +43,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.whitdan.arkhamhorrorlcgcampaignguide.R.array.investigators;
 import static com.whitdan.arkhamhorrorlcgcampaignguide.R.string.defeated;
 import static com.whitdan.arkhamhorrorlcgcampaignguide.R.string.drew;
 import static com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract.CarcosaEntry;
@@ -160,20 +159,19 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
         LinearLayout defeatedTwoSelection = findViewById(R.id.defeated_two_selection);
         LinearLayout defeatedThreeSelection = findViewById(R.id.defeated_three_selection);
         LinearLayout defeatedFourSelection = findViewById(R.id.defeated_four_selection);
-        final String[] investigatorNames = getResources().getStringArray(investigators);
         switch (globalVariables.Investigators.size()) {
             case 4:
                 defeatedFour.setVisibility(VISIBLE);
-                investigatorFourName.setText(investigatorNames[globalVariables.Investigators.get(3).name.ordinal()]);
+                investigatorFourName.setText(globalVariables.Investigators.get(3).name.getName());
             case 3:
                 defeatedThree.setVisibility(VISIBLE);
-                investigatorThreeName.setText(investigatorNames[globalVariables.Investigators.get(2).name.ordinal()]);
+                investigatorThreeName.setText(globalVariables.Investigators.get(2).name.getName());
             case 2:
                 defeatedTwo.setVisibility(VISIBLE);
-                investigatorTwoName.setText(investigatorNames[globalVariables.Investigators.get(1).name.ordinal()]);
+                investigatorTwoName.setText(globalVariables.Investigators.get(1).name.getName());
             case 1:
                 defeatedOne.setVisibility(VISIBLE);
-                investigatorOneName.setText(investigatorNames[globalVariables.Investigators.get(0).name.ordinal()]);
+                investigatorOneName.setText(globalVariables.Investigators.get(0).name.getName());
         }
         for (int i = 0; i < defeatedOneSelection.getChildCount(); i++) {
             View view = defeatedOneSelection.getChildAt(i);
@@ -536,9 +534,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                     switch (globalVariables.Investigators.size()) {
                                         case 4:
                                             selectInvestigatorFour.setVisibility(VISIBLE);
-                                            selectInvestigatorFour.setText(investigatorNames[globalVariables
+                                            selectInvestigatorFour.setText(globalVariables
                                                     .Investigators.get(3)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorFour.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -552,9 +550,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 3:
                                             selectInvestigatorThree.setVisibility(VISIBLE);
-                                            selectInvestigatorThree.setText(investigatorNames[globalVariables
+                                            selectInvestigatorThree.setText(globalVariables
                                                     .Investigators.get
-                                                            (2).name.ordinal()]);
+                                                            (2).name.getName());
                                             selectInvestigatorThree.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -568,9 +566,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 2:
                                             selectInvestigatorTwo.setVisibility(VISIBLE);
-                                            selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                                            selectInvestigatorTwo.setText(globalVariables
                                                     .Investigators.get(1)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorTwo.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -584,9 +582,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 1:
                                             selectInvestigatorOne.setVisibility(VISIBLE);
-                                            selectInvestigatorOne.setText(investigatorNames[globalVariables
+                                            selectInvestigatorOne.setText(globalVariables
                                                     .Investigators.get(0)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorOne.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -620,9 +618,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                     switch (globalVariables.Investigators.size()) {
                                         case 4:
                                             selectInvestigatorFour.setVisibility(VISIBLE);
-                                            selectInvestigatorFour.setText(investigatorNames[globalVariables
+                                            selectInvestigatorFour.setText(globalVariables
                                                     .Investigators.get(3)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorFour.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -636,9 +634,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 3:
                                             selectInvestigatorThree.setVisibility(VISIBLE);
-                                            selectInvestigatorThree.setText(investigatorNames[globalVariables
+                                            selectInvestigatorThree.setText(globalVariables
                                                     .Investigators.get
-                                                            (2).name.ordinal()]);
+                                                            (2).name.getName());
                                             selectInvestigatorThree.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -652,9 +650,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 2:
                                             selectInvestigatorTwo.setVisibility(VISIBLE);
-                                            selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                                            selectInvestigatorTwo.setText(globalVariables
                                                     .Investigators.get(1)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorTwo.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -668,9 +666,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                             });
                                         case 1:
                                             selectInvestigatorOne.setVisibility(VISIBLE);
-                                            selectInvestigatorOne.setText(investigatorNames[globalVariables
+                                            selectInvestigatorOne.setText(globalVariables
                                                     .Investigators.get(0)
-                                                    .name.ordinal()]);
+                                                    .name.getName());
                                             selectInvestigatorOne.setOnCheckedChangeListener(new CompoundButton
                                                     .OnCheckedChangeListener() {
                                                 @Override
@@ -845,24 +843,24 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 counterFour.setVisibility(VISIBLE);
-                                counterFourName.setText(investigatorNames[globalVariables
+                                counterFourName.setText(globalVariables
                                         .Investigators.get(3)
-                                        .name.ordinal()]);
+                                        .name.getName());
                             case 3:
                                 counterThree.setVisibility(VISIBLE);
-                                counterThreeName.setText(investigatorNames[globalVariables
+                                counterThreeName.setText(globalVariables
                                         .Investigators.get(2)
-                                        .name.ordinal()]);
+                                        .name.getName());
                             case 2:
                                 counterTwo.setVisibility(VISIBLE);
-                                counterTwoName.setText(investigatorNames[globalVariables
+                                counterTwoName.setText(globalVariables
                                         .Investigators.get(1)
-                                        .name.ordinal()]);
+                                        .name.getName());
                             case 1:
                                 counterOne.setVisibility(VISIBLE);
-                                counterOneName.setText(investigatorNames[globalVariables
+                                counterOneName.setText(globalVariables
                                         .Investigators.get(0)
-                                        .name.ordinal()]);
+                                        .name.getName());
                         }
                         break;
                     case 4:
@@ -968,24 +966,24 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                         switch (globalVariables.Investigators.size()) {
                             case 4:
                                 selectInvestigatorFour.setVisibility(VISIBLE);
-                                selectInvestigatorFour.setText(investigatorNames[globalVariables
+                                selectInvestigatorFour.setText(globalVariables
                                         .Investigators.get(3)
-                                        .name.ordinal()]);
+                                        .name.getName());
                             case 3:
                                 selectInvestigatorThree.setVisibility(VISIBLE);
-                                selectInvestigatorThree.setText(investigatorNames[globalVariables
+                                selectInvestigatorThree.setText(globalVariables
                                         .Investigators.get
-                                                (2).name.ordinal()]);
+                                                (2).name.getName());
                             case 2:
                                 selectInvestigatorTwo.setVisibility(VISIBLE);
-                                selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                                selectInvestigatorTwo.setText(globalVariables
                                         .Investigators.get(1)
-                                        .name.ordinal()]);
+                                        .name.getName());
                             case 1:
                                 selectInvestigatorOne.setVisibility(VISIBLE);
-                                selectInvestigatorOne.setText(investigatorNames[globalVariables
+                                selectInvestigatorOne.setText(globalVariables
                                         .Investigators.get(0)
-                                        .name.ordinal()]);
+                                        .name.getName());
                                 break;
                         }
                 }
@@ -1573,13 +1571,12 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                 selectInvestigatorHeading.setVisibility(VISIBLE);
                                 selectInvestigatorHeading.setText(R.string.select_lead_investigator);
                                 selectInvestigator.setVisibility(VISIBLE);
-                                String[] investigatorNames = getResources().getStringArray(R.array.investigators);
                                 switch (globalVariables.Investigators.size()) {
                                     case 4:
                                         selectInvestigatorFour.setVisibility(VISIBLE);
-                                        selectInvestigatorFour.setText(investigatorNames[globalVariables
+                                        selectInvestigatorFour.setText(globalVariables
                                                 .Investigators.get(3)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                         selectInvestigatorFour.setOnCheckedChangeListener(new CompoundButton
                                                 .OnCheckedChangeListener() {
                                             @Override
@@ -1593,9 +1590,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                         });
                                     case 3:
                                         selectInvestigatorThree.setVisibility(VISIBLE);
-                                        selectInvestigatorThree.setText(investigatorNames[globalVariables
+                                        selectInvestigatorThree.setText(globalVariables
                                                 .Investigators.get
-                                                        (2).name.ordinal()]);
+                                                        (2).name.getName());
                                         selectInvestigatorThree.setOnCheckedChangeListener(new CompoundButton
                                                 .OnCheckedChangeListener() {
                                             @Override
@@ -1609,9 +1606,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                         });
                                     case 2:
                                         selectInvestigatorTwo.setVisibility(VISIBLE);
-                                        selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                                        selectInvestigatorTwo.setText(globalVariables
                                                 .Investigators.get(1)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                         selectInvestigatorTwo.setOnCheckedChangeListener(new CompoundButton
                                                 .OnCheckedChangeListener() {
                                             @Override
@@ -1625,9 +1622,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                         });
                                     case 1:
                                         selectInvestigatorOne.setVisibility(VISIBLE);
-                                        selectInvestigatorOne.setText(investigatorNames[globalVariables
+                                        selectInvestigatorOne.setText(globalVariables
                                                 .Investigators.get(0)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                         selectInvestigatorOne.setOnCheckedChangeListener(new CompoundButton
                                                 .OnCheckedChangeListener() {
                                             @Override
@@ -2105,28 +2102,27 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                 selectInvestigatorHeading.setVisibility(VISIBLE);
                                 selectInvestigatorHeading.setText(R.string.select_read_act);
                                 selectInvestigator.setVisibility(VISIBLE);
-                                String[] investigatorNames = getResources().getStringArray(R.array.investigators);
                                 switch (globalVariables.Investigators.size()) {
                                     case 4:
                                         selectInvestigatorFour.setVisibility(VISIBLE);
-                                        selectInvestigatorFour.setText(investigatorNames[globalVariables
+                                        selectInvestigatorFour.setText(globalVariables
                                                 .Investigators.get(3)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                     case 3:
                                         selectInvestigatorThree.setVisibility(VISIBLE);
-                                        selectInvestigatorThree.setText(investigatorNames[globalVariables
+                                        selectInvestigatorThree.setText(globalVariables
                                                 .Investigators.get
-                                                        (2).name.ordinal()]);
+                                                        (2).name.getName());
                                     case 2:
                                         selectInvestigatorTwo.setVisibility(VISIBLE);
-                                        selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                                        selectInvestigatorTwo.setText(globalVariables
                                                 .Investigators.get(1)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                     case 1:
                                         selectInvestigatorOne.setVisibility(VISIBLE);
-                                        selectInvestigatorOne.setText(investigatorNames[globalVariables
+                                        selectInvestigatorOne.setText(globalVariables
                                                 .Investigators.get(0)
-                                                .name.ordinal()]);
+                                                .name.getName());
                                         break;
                                 }
                             } else {
@@ -2155,7 +2151,7 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                 case 0:
                                     if (globalVariables.Conviction >= globalVariables.Doubt) {
                                         resolutionTextView.setText(R.string.dim_resolution_four);
-                                    } else if (globalVariables.Doubt > globalVariables.Conviction) {
+                                    } else {
                                         resolutionTextView.setText(R.string.dim_resolution_five);
                                     }
                                     selectInvestigatorHeading.setVisibility(GONE);
@@ -2479,13 +2475,12 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
             TextView investigatorTwoStatus = v.findViewById(R.id.investigator_two_status);
             TextView investigatorThreeStatus = v.findViewById(R.id.investigator_three_status);
             TextView investigatorFourStatus = v.findViewById(R.id.investigator_four_status);
-            String[] investigatorNames = getResources().getStringArray(R.array.investigators);
             // For each investigator, set it visible or not, apply the right name to it, set the right typeface and
             // set a listener to the link
             switch (globalVariables.Investigators.size()) {
                 case 4:
                     investigatorFour.setVisibility(VISIBLE);
-                    investigatorFourName.setText(investigatorNames[globalVariables.Investigators.get(3).name.ordinal()]);
+                    investigatorFourName.setText(globalVariables.Investigators.get(3).name.getName());
                     investigatorFourName.setTypeface(arnoprobold);
                     investigatorFourStatus.setTypeface(arnopro);
                     switch (globalVariables.Investigators.get(3).TempStatus) {
@@ -2504,7 +2499,7 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     }
                 case 3:
                     investigatorThree.setVisibility(VISIBLE);
-                    investigatorThreeName.setText(investigatorNames[globalVariables.Investigators.get(2).name.ordinal()]);
+                    investigatorThreeName.setText(globalVariables.Investigators.get(2).name.getName());
                     investigatorThreeName.setTypeface(arnoprobold);
                     investigatorThreeStatus.setTypeface(arnopro);
                     switch (globalVariables.Investigators.get(2).TempStatus) {
@@ -2523,7 +2518,7 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     }
                 case 2:
                     investigatorTwo.setVisibility(VISIBLE);
-                    investigatorTwoName.setText(investigatorNames[globalVariables.Investigators.get(1).name.ordinal()]);
+                    investigatorTwoName.setText(globalVariables.Investigators.get(1).name.getName());
                     investigatorTwoName.setTypeface(arnoprobold);
                     investigatorTwoStatus.setTypeface(arnopro);
                     switch (globalVariables.Investigators.get(1).TempStatus) {
@@ -2542,7 +2537,7 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     }
                 case 1:
                     investigatorOne.setVisibility(VISIBLE);
-                    investigatorOneName.setText(investigatorNames[globalVariables.Investigators.get(0).name.ordinal()]);
+                    investigatorOneName.setText(globalVariables.Investigators.get(0).name.getName());
                     investigatorOneName.setTypeface(arnoprobold);
                     investigatorOneStatus.setTypeface(arnopro);
                     switch (globalVariables.Investigators.get(0).TempStatus) {
@@ -3549,25 +3544,25 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                 globalVariables.Theatre = 3;
                                 if (investigatorOne.isChecked()) {
                                     globalVariables.Investigators.get(0).AvailableXP += 2;
-                                    globalVariables.InvOneReadAct = globalVariables.Investigators.get(0).name.ordinal();
+                                    globalVariables.InvOneReadAct = globalVariables.Investigators.get(0).name.getName();
                                 } else {
                                     globalVariables.InvOneReadAct = 0;
                                 }
                                 if (investigatorTwo.isChecked()) {
                                     globalVariables.Investigators.get(1).AvailableXP += 2;
-                                    globalVariables.InvTwoReadAct = globalVariables.Investigators.get(1).name.ordinal();
+                                    globalVariables.InvTwoReadAct = globalVariables.Investigators.get(1).name.getName();
                                 } else {
                                     globalVariables.InvTwoReadAct = 0;
                                 }
                                 if (investigatorThree.isChecked()) {
                                     globalVariables.Investigators.get(2).AvailableXP += 2;
-                                    globalVariables.InvThreeReadAct = globalVariables.Investigators.get(2).name.ordinal();
+                                    globalVariables.InvThreeReadAct = globalVariables.Investigators.get(2).name.getName();
                                 } else {
                                     globalVariables.InvThreeReadAct = 0;
                                 }
                                 if (investigatorFour.isChecked()) {
                                     globalVariables.Investigators.get(3).AvailableXP += 2;
-                                    globalVariables.InvFourReadAct = globalVariables.Investigators.get(3).name.ordinal();
+                                    globalVariables.InvFourReadAct = globalVariables.Investigators.get(3).name.getName();
                                 } else {
                                     globalVariables.InvFourReadAct = 0;
                                 }
@@ -3672,22 +3667,22 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                         }
                         if (globalVariables.ScenarioResolution != 0) {
                             if (investigatorOne.isChecked()) {
-                                globalVariables.InvOnePossessed = globalVariables.Investigators.get(0).name.ordinal();
+                                globalVariables.InvOnePossessed = globalVariables.Investigators.get(0).name.getName();
                             } else {
                                 globalVariables.InvOnePossessed = 0;
                             }
                             if (investigatorTwo.isChecked()) {
-                                globalVariables.InvTwoPossessed = globalVariables.Investigators.get(1).name.ordinal();
+                                globalVariables.InvTwoPossessed = globalVariables.Investigators.get(1).name.getName();
                             } else {
                                 globalVariables.InvTwoPossessed = 0;
                             }
                             if (investigatorThree.isChecked()) {
-                                globalVariables.InvThreePossessed = globalVariables.Investigators.get(2).name.ordinal();
+                                globalVariables.InvThreePossessed = globalVariables.Investigators.get(2).name.getName();
                             } else {
                                 globalVariables.InvThreePossessed = 0;
                             }
                             if (investigatorFour.isChecked()) {
-                                globalVariables.InvFourPossessed = globalVariables.Investigators.get(3).name.ordinal();
+                                globalVariables.InvFourPossessed = globalVariables.Investigators.get(3).name.getName();
                             } else {
                                 globalVariables.InvFourPossessed = 0;
                             }
@@ -4378,28 +4373,27 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
             selectInvestigatorTwo.setTypeface(arnopro);
             selectInvestigatorThree.setTypeface(arnopro);
             selectInvestigatorFour.setTypeface(arnopro);
-            String[] investigatorNames = getResources().getStringArray(investigators);
             switch (globalVariables.Investigators.size()) {
                 case 4:
                     selectInvestigatorFour.setVisibility(VISIBLE);
-                    selectInvestigatorFour.setText(investigatorNames[globalVariables
+                    selectInvestigatorFour.setText(globalVariables
                             .Investigators.get(3)
-                            .name.ordinal()]);
+                            .name.getName());
                 case 3:
                     selectInvestigatorThree.setVisibility(VISIBLE);
-                    selectInvestigatorThree.setText(investigatorNames[globalVariables
+                    selectInvestigatorThree.setText(globalVariables
                             .Investigators.get
-                                    (2).name.ordinal()]);
+                                    (2).name.getName());
                 case 2:
                     selectInvestigatorTwo.setVisibility(VISIBLE);
-                    selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                    selectInvestigatorTwo.setText(globalVariables
                             .Investigators.get(1)
-                            .name.ordinal()]);
+                            .name.getName());
                 case 1:
                     selectInvestigatorOne.setVisibility(VISIBLE);
-                    selectInvestigatorOne.setText(investigatorNames[globalVariables
+                    selectInvestigatorOne.setText(globalVariables
                             .Investigators.get(0)
-                            .name.ordinal()]);
+                            .name.getName());
                     break;
             }
 
@@ -4595,13 +4589,12 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                 }
             });
 
-            String[] investigatorNames = getResources().getStringArray(investigators);
             switch (globalVariables.Investigators.size()) {
                 case 4:
                     selectInvestigatorFour.setVisibility(VISIBLE);
-                    selectInvestigatorFour.setText(investigatorNames[globalVariables
+                    selectInvestigatorFour.setText(globalVariables
                             .Investigators.get(3)
-                            .name.ordinal()]);
+                            .name.getName());
                     selectInvestigatorFour.setOnCheckedChangeListener(new CompoundButton
                             .OnCheckedChangeListener() {
                         @Override
@@ -4615,9 +4608,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     });
                 case 3:
                     selectInvestigatorThree.setVisibility(VISIBLE);
-                    selectInvestigatorThree.setText(investigatorNames[globalVariables
+                    selectInvestigatorThree.setText(globalVariables
                             .Investigators.get
-                                    (2).name.ordinal()]);
+                                    (2).name.getName());
                     selectInvestigatorThree.setOnCheckedChangeListener(new CompoundButton
                             .OnCheckedChangeListener() {
                         @Override
@@ -4631,9 +4624,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     });
                 case 2:
                     selectInvestigatorTwo.setVisibility(VISIBLE);
-                    selectInvestigatorTwo.setText(investigatorNames[globalVariables
+                    selectInvestigatorTwo.setText(globalVariables
                             .Investigators.get(1)
-                            .name.ordinal()]);
+                            .name.getName());
                     selectInvestigatorTwo.setOnCheckedChangeListener(new CompoundButton
                             .OnCheckedChangeListener() {
                         @Override
@@ -4647,9 +4640,9 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                     });
                 case 1:
                     selectInvestigatorOne.setVisibility(VISIBLE);
-                    selectInvestigatorOne.setText(investigatorNames[globalVariables
+                    selectInvestigatorOne.setText(globalVariables
                             .Investigators.get(0)
-                            .name.ordinal()]);
+                            .name.getName());
                     selectInvestigatorOne.setOnCheckedChangeListener(new CompoundButton
                             .OnCheckedChangeListener() {
                         @Override

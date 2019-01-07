@@ -185,34 +185,6 @@
 
 
     <!--Investigator names-->
-    <string-array name="investigators">
-        <item>None</item>
-        <item>Roland Banks</item>
-        <item>Daisy Walker</item>
-        <item>Skids O\'Toole</item>
-        <item>Agnes Baker</item>
-        <item>Wendy Adams</item>
-        <item>Zoey Samaras</item>
-        <item>Rex Murphy</item>
-        <item>Jenny Barnes</item>
-        <item>Jim Culver</item>
-        <item>\"Ashcan\" Pete</item>
-        <item>Mark Harrigan</item>
-        <item>Minh Thi Phan</item>
-        <item>Sefina Rousseau</item>
-        <item>Akachi Onyele</item>
-        <item>William Yorick</item>
-        <item>Lola Hayes</item>
-        <item>Marie Lambeau</item>
-        <item>Norman Withers</item>
-        <item>Carolyn Fern</item>
-        <item>Silas Marsh</item>
-        <item>Leo Anderson</item>
-        <item>Ursula Downs</item>
-        <item>Finn Edwards</item>
-        <item>Father Mateo</item>
-        <item>Calvin Wright</item>
-    </string-array>
     <string name="roland_banks">Roland Banks</string>
     <string name="daisy_walker">Daisy Walker</string>
     <string name="skids_otoole">Skids O\'Toole</string>

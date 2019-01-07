@@ -11,6 +11,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.EditLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -84,8 +85,6 @@ public class CampaignLogActivity extends AppCompatActivity {
         } else {
             scenario = globalVariables.CurrentScenario;
         }
-
-        String[] investigatorNames = getResources().getStringArray(R.array.investigators);
 
         /*
         Night of the Zealot log
@@ -516,7 +515,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOneReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_one_read_act));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvOneReadAct] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvOneReadAct));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
                 }
@@ -524,7 +524,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_two_read_act));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvTwoReadAct] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvTwoReadAct));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
                 }
@@ -532,7 +533,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreeReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_three_read_act));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvThreeReadAct] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvThreeReadAct));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
                 }
@@ -540,7 +542,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourReadAct == 999) {
                         carcosaBuilder.append(getString(R.string.inv_four_read_act));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvFourReadAct] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvFourReadAct));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.read_act));
                     }
                 }
@@ -578,7 +581,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOnePossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_one_possessed));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvOnePossessed] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvOnePossessed));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
                 }
@@ -586,7 +590,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoPossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_two_possessed));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvTwoPossessed] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvTwoPossessed));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
                 }
@@ -594,7 +599,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreePossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_three_possessed));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvThreePossessed] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvThreePossessed));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
                 }
@@ -602,7 +608,8 @@ public class CampaignLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourPossessed == 999) {
                         carcosaBuilder.append(getString(R.string.inv_four_possessed));
                     } else {
-                        carcosaBuilder.append(investigatorNames[globalVariables.InvFourPossessed] + " ");
+                        String name = getString(InvestigatorCharacter.getNameById(globalVariables.InvFourPossessed));
+                        carcosaBuilder.append(name + " ");
                         carcosaBuilder.append(getString(R.string.possessed));
                     }
                 }
@@ -717,14 +724,14 @@ public class CampaignLogActivity extends AppCompatActivity {
                 if(i > 0){
                     suppliesBuilder.append("\n");
                 }
-                suppliesBuilder.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
+                suppliesBuilder.append(getString(globalVariables.Investigators.get(i).name.getName()));
                 suppliesBuilder.append("\n");
 
                 boolean supplies = false;
 
                 if(globalVariables.Investigators.get(i).Provisions > 0){
                     suppliesBuilder.append("\t\t");
-                    suppliesBuilder.append(Integer.toString(globalVariables.Investigators.get(i).Provisions));
+                    suppliesBuilder.append(globalVariables.Investigators.get(i).Provisions);
                     suppliesBuilder.append(" ");
                     suppliesBuilder.append(getResources().getString(R.string.provisions));
                     suppliesBuilder.append("\n");
@@ -733,7 +740,7 @@ public class CampaignLogActivity extends AppCompatActivity {
 
                 if(globalVariables.Investigators.get(i).Medicine > 0){
                     suppliesBuilder.append("\t\t");
-                    suppliesBuilder.append(Integer.toString(globalVariables.Investigators.get(i).Medicine));
+                    suppliesBuilder.append(globalVariables.Investigators.get(i).Medicine);
                     suppliesBuilder.append(" ");
                     suppliesBuilder.append(getResources().getString(R.string.medicine));
                     suppliesBuilder.append("\n");

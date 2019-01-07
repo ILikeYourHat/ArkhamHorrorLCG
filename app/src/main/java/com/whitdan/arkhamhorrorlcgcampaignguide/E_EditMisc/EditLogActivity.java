@@ -24,6 +24,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -1377,7 +1378,6 @@ public class EditLogActivity extends AppCompatActivity {
                 readActHeadingText.setText(R.string.select_read_act);
                 readActHeadingText.setTypeface(teutonic);
                 editLayout.addView(readActHeading, lp);
-                String[] investigatorNames = getResources().getStringArray(R.array.investigators);
                 View investigatorOneReadAct = View.inflate(this, R.layout.e_item_checkbox, null);
                 CheckBox invOneReadActBox = investigatorOneReadAct.findViewById(R.id.checkbox);
                 invOneReadActBox.setId(R.id.inv_one_read_act);
@@ -1388,9 +1388,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOneReadAct == 999) {
                         invOneReadActBox.setText(getString(R.string.inv_one_read_act).trim());
                     } else {
-                        invOneReadActBox.setText(investigatorNames[globalVariables.InvOneReadAct] + " " + getString(R
-                                .string.read_act)
-                                .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvOneReadAct].getName());
+                        invOneReadActBox.setText(name + " " + getString(R
+                                .string.read_act).trim());
                     }
                 } else {
                     invOneReadActBox.setText(getString(R.string.inv_one_read_act).trim());
@@ -1405,9 +1405,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoReadAct == 999) {
                         invTwoReadActBox.setText(getString(R.string.inv_two_read_act).trim());
                     } else {
-                        invTwoReadActBox.setText(investigatorNames[globalVariables.InvTwoReadAct] + " " + getString(R
-                                .string.read_act)
-                                .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvTwoReadAct].getName());
+                        invTwoReadActBox.setText(name + " " + getString(R
+                                .string.read_act).trim());
                     }
                 } else {
                     invTwoReadActBox.setText(getString(R.string.inv_two_read_act).trim());
@@ -1422,11 +1422,8 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreeReadAct == 999) {
                         invThreeReadActBox.setText(getString(R.string.inv_three_read_act).trim());
                     } else {
-                        invThreeReadActBox.setText(investigatorNames[globalVariables.InvThreeReadAct] + " " +
-                                getString(R
-                                        .string
-                                        .read_act)
-                                        .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvThreeReadAct].getName());
+                        invThreeReadActBox.setText(name + " " + getString(R.string.read_act).trim());
                     }
                 } else {
                     invThreeReadActBox.setText(getString(R.string.inv_three_read_act).trim());
@@ -1441,9 +1438,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourReadAct == 999) {
                         invFourReadActBox.setText(getString(R.string.inv_four_read_act).trim());
                     } else {
-                        invFourReadActBox.setText(investigatorNames[globalVariables.InvFourReadAct] + " " + getString(R
-                                .string.read_act)
-                                .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvFourReadAct].getName());
+                        invFourReadActBox.setText(name + " " + getString(R
+                                .string.read_act).trim());
                     }
                 } else {
                     invFourReadActBox.setText(getString(R.string.inv_four_read_act).trim());
@@ -1517,7 +1514,6 @@ public class EditLogActivity extends AppCompatActivity {
                 possessedHeadingText.setText(R.string.possessed_heading);
                 possessedHeadingText.setTypeface(teutonic);
                 editLayout.addView(possessedHeading, lp);
-                String[] investigatorNames = getResources().getStringArray(R.array.investigators);
                 View investigatorOnePossessed = View.inflate(this, R.layout.e_item_checkbox, null);
                 CheckBox invOnePossessedBox = investigatorOnePossessed.findViewById(R.id.checkbox);
                 invOnePossessedBox.setId(R.id.inv_one_possessed);
@@ -1528,10 +1524,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvOnePossessed == 999) {
                         invOnePossessedBox.setText(getString(R.string.inv_one_possessed).trim());
                     } else {
-                        invOnePossessedBox.setText(investigatorNames[globalVariables.InvOnePossessed] + " " +
-                                getString(R
-                                        .string.possessed)
-                                        .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvOnePossessed].getName());
+                        invOnePossessedBox.setText(name + " " + getString(R
+                                        .string.possessed).trim());
                     }
                 } else {
                     invOnePossessedBox.setText(getString(R.string.inv_one_possessed).trim());
@@ -1546,10 +1541,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvTwoPossessed == 999) {
                         invTwoPossessedBox.setText(getString(R.string.inv_two_possessed).trim());
                     } else {
-                        invTwoPossessedBox.setText(investigatorNames[globalVariables.InvTwoPossessed] + " " +
-                                getString(R
-                                        .string.possessed)
-                                        .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvTwoPossessed].getName());
+                        invTwoPossessedBox.setText(name + " " + getString(R
+                                        .string.possessed).trim());
                     }
                 } else {
                     invTwoPossessedBox.setText(getString(R.string.inv_two_possessed).trim());
@@ -1564,11 +1558,8 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvThreePossessed == 999) {
                         invThreePossessedBox.setText(getString(R.string.inv_three_possessed).trim());
                     } else {
-                        invThreePossessedBox.setText(investigatorNames[globalVariables.InvThreePossessed] + " " +
-                                getString(R
-                                        .string
-                                        .possessed)
-                                        .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvThreePossessed].getName());
+                        invThreePossessedBox.setText(name + " " + getString(R.string.possessed).trim());
                     }
                 } else {
                     invThreePossessedBox.setText(getString(R.string.inv_three_possessed).trim());
@@ -1583,10 +1574,9 @@ public class EditLogActivity extends AppCompatActivity {
                     if (globalVariables.InvFourPossessed == 999) {
                         invFourPossessedBox.setText(getString(R.string.inv_four_possessed).trim());
                     } else {
-                        invFourPossessedBox.setText(investigatorNames[globalVariables.InvFourPossessed] + " " +
-                                getString(R
-                                        .string.possessed)
-                                        .trim());
+                        String name = getString(InvestigatorCharacter.values()[globalVariables.InvFourPossessed].getName());
+                        invFourPossessedBox.setText(name + " " + getString(R
+                                        .string.possessed).trim());
                     }
                 } else {
                     invFourPossessedBox.setText(getString(R.string.inv_four_possessed).trim());

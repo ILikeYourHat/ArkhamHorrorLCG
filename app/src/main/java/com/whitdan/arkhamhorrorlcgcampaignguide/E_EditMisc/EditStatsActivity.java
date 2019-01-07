@@ -134,15 +134,13 @@ public class EditStatsActivity extends AppCompatActivity {
             if (currentInvestigator != null) {
                 // Typefaces
                 Typeface teutonic = Typeface.createFromAsset(context.getAssets(), "fonts/teutonic.ttf");
-                Typeface arnopro = Typeface.createFromAsset(context.getAssets(), "fonts/arnopro.otf");
                 Typeface arnoprobold = Typeface.createFromAsset(context.getAssets(), "fonts/arnoprobold.otf");
                 Typeface wolgast = Typeface.createFromAsset(context.getAssets(), "fonts/wolgast.otf");
                 Typeface wolgastbold = Typeface.createFromAsset(context.getAssets(), "fonts/wolgastbold.otf");
 
                 // Set investigator name
                 TextView investigatorNameView = listItemView.findViewById(R.id.investigator_name);
-                String[] investigatorNames = getContext().getResources().getStringArray(R.array.investigators);
-                String name = investigatorNames[currentInvestigator.name.ordinal()] + " ";
+                String name = currentInvestigator.name.getName() + " ";
                 investigatorNameView.setText(name);
                 investigatorNameView.setTypeface(teutonic);
                 String playerName = " ";
