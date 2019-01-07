@@ -156,7 +156,7 @@ public class CampaignFinishedActivity extends AppCompatActivity {
                 // Set investigator name
                 TextView investigatorNameView = listItemView.findViewById(R.id.investigator_name);
                 String[] investigatorNames = getContext().getResources().getStringArray(R.array.investigators);
-                String name = investigatorNames[currentInvestigator.Name] + " ";
+                String name = investigatorNames[currentInvestigator.name.ordinal()] + " ";
                 investigatorNameView.setText(name);
                 investigatorNameView.setTypeface(teutonic);
                 String playerName = " ";
@@ -375,7 +375,7 @@ public class CampaignFinishedActivity extends AppCompatActivity {
                         globalVariables.CurrentCampaign = 3;
                         boolean lola = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            if (globalVariables.Investigators.get(i).Name == Investigator.LOLA_HAYES) {
+                            if (globalVariables.Investigators.get(i).name == Investigator.Name.LOLA_HAYES) {
                                 lola = true;
                             }
                         }

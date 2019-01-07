@@ -107,10 +107,10 @@ public class EditTeamActivity extends AppCompatActivity {
                 // Set the investigator name (if there's a player name add it in brackets to the end)
                 if (globalVariables.Investigators.get(i).PlayerName != null && globalVariables.Investigators.get(i)
                         .PlayerName.length() > 0) {
-                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).Name] + " (" +
+                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).name.ordinal()] + " (" +
                             globalVariables.Investigators.get(i).PlayerName + ")";
                 } else {
-                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).Name];
+                    investigatorName = investigatorNames[globalVariables.Investigators.get(i).name.ordinal()];
                 }
                 investigator.setText(investigatorName);
                 // Set the Id of the checkbox to the number of the investigator in the array
@@ -133,10 +133,10 @@ public class EditTeamActivity extends AppCompatActivity {
             // Set the investigator name (if there's a player name add it in brackets to the end)
             if (globalVariables.SavedInvestigators.get(i).PlayerName != null && globalVariables.SavedInvestigators
                     .get(i).PlayerName.length() > 0) {
-                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).Name] + " (" +
+                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).name.ordinal()] + " (" +
                         globalVariables.SavedInvestigators.get(i).PlayerName + ")";
             } else {
-                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).Name];
+                investigatorName = investigatorNames[globalVariables.SavedInvestigators.get(i).name.ordinal()];
             }
             investigator.setText(investigatorName);
             // Set the Id of the checkbox to the number of the investigator in the array + 100
@@ -239,35 +239,35 @@ public class EditTeamActivity extends AppCompatActivity {
         int silas = 0;
 
         // Setup CheckBoxes with OnCheckedChangeListeners, as long as the investigator is not in use
-        if (globalVariables.InvestigatorsInUse[Investigator.ROLAND_BANKS] == 0) {
+        if (globalVariables.InvestigatorsInUse[Investigator.Name.ROLAND_BANKS.ordinal()] == 0) {
             CheckBox roland = findViewById(R.id.roland_banks);
             roland.setVisibility(VISIBLE);
             roland.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
         } else {
             core++;
         }
-        if (globalVariables.InvestigatorsInUse[Investigator.SKIDS_OTOOLE] == 0) {
+        if (globalVariables.InvestigatorsInUse[Investigator.Name.SKIDS_OTOOLE.ordinal()] == 0) {
             CheckBox skids = findViewById(R.id.skids_otoole);
             skids.setVisibility(VISIBLE);
             skids.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
         } else {
             core++;
         }
-        if (globalVariables.InvestigatorsInUse[Investigator.AGNES_BAKER] == 0) {
+        if (globalVariables.InvestigatorsInUse[Investigator.Name.AGNES_BAKER.ordinal()] == 0) {
             CheckBox agnes = findViewById(R.id.agnes_baker);
             agnes.setVisibility(VISIBLE);
             agnes.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
         } else {
             core++;
         }
-        if (globalVariables.InvestigatorsInUse[Investigator.DAISY_WALKER] == 0) {
+        if (globalVariables.InvestigatorsInUse[Investigator.Name.DAISY_WALKER.ordinal()] == 0) {
             CheckBox daisy = findViewById(R.id.daisy_walker);
             daisy.setVisibility(VISIBLE);
             daisy.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
         } else {
             core++;
         }
-        if (globalVariables.InvestigatorsInUse[Investigator.WENDY_ADAMS] == 0) {
+        if (globalVariables.InvestigatorsInUse[Investigator.Name.WENDY_ADAMS.ordinal()] == 0) {
             CheckBox wendy = findViewById(R.id.wendy_adams);
             wendy.setVisibility(VISIBLE);
             wendy.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -281,35 +281,35 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Setup checkboxes for Dunwich investigators
         if (dunwichOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.ZOEY_SAMARAS] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.ZOEY_SAMARAS.ordinal()] == 0) {
                 CheckBox zoey = findViewById(R.id.zoey_samaras);
                 zoey.setVisibility(VISIBLE);
                 zoey.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 dunwich++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.REX_MURPHY] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.REX_MURPHY.ordinal()] == 0) {
                 CheckBox rex = findViewById(R.id.rex_murphy);
                 rex.setVisibility(VISIBLE);
                 rex.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 dunwich++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.JENNY_BARNES] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.JENNY_BARNES.ordinal()] == 0) {
                 CheckBox jenny = findViewById(R.id.jenny_barnes);
                 jenny.setVisibility(VISIBLE);
                 jenny.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 dunwich++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.JIM_CULVER] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.JIM_CULVER.ordinal()] == 0) {
                 CheckBox jim = findViewById(R.id.jim_culver);
                 jim.setVisibility(VISIBLE);
                 jim.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 dunwich++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.ASHCAN_PETE] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.ASHCAN_PETE.ordinal()] == 0) {
                 CheckBox pete = findViewById(R.id.ashcan_pete);
                 pete.setVisibility(VISIBLE);
                 pete.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -324,42 +324,42 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Setup checkboxes for Carcosa investigators
         if (carcosaOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.MARK_HARRIGAN] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.MARK_HARRIGAN.ordinal()] == 0) {
                 CheckBox mark = findViewById(R.id.mark_harrigan);
                 mark.setVisibility(VISIBLE);
                 mark.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 carcosa++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.MINH_THI_PHAN] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.MINH_THI_PHAN.ordinal()] == 0) {
                 CheckBox minh = findViewById(R.id.minh_thi_phan);
                 minh.setVisibility(VISIBLE);
                 minh.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 carcosa++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.SEFINA_ROUSSEAU] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.SEFINA_ROUSSEAU.ordinal()] == 0) {
                 CheckBox sefina = findViewById(R.id.sefina_rousseau);
                 sefina.setVisibility(VISIBLE);
                 sefina.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 carcosa++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.AKACHI_ONYELE] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.AKACHI_ONYELE.ordinal()] == 0) {
                 CheckBox akachi = findViewById(R.id.akachi_onyele);
                 akachi.setVisibility(VISIBLE);
                 akachi.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 carcosa++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.WILLIAM_YORICK] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.WILLIAM_YORICK.ordinal()] == 0) {
                 CheckBox william = findViewById(R.id.william_yorick);
                 william.setVisibility(VISIBLE);
                 william.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 carcosa++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.LOLA_HAYES] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.LOLA_HAYES.ordinal()] == 0) {
                 CheckBox lola = findViewById(R.id.lola_hayes);
                 lola.setVisibility(VISIBLE);
                 lola.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -374,35 +374,35 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Setup checkboxes for Forgotten Age investigators
         if (forgottenOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.LEO_ANDERSON] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.LEO_ANDERSON.ordinal()] == 0) {
                 CheckBox leo = findViewById(R.id.leo_anderson);
                 leo.setVisibility(VISIBLE);
                 leo.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 forgotten++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.URSULA_DOWNS] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.URSULA_DOWNS.ordinal()] == 0) {
                 CheckBox ursula = findViewById(R.id.ursula_downs);
                 ursula.setVisibility(VISIBLE);
                 ursula.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 forgotten++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.FINN_EDWARDS] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.FINN_EDWARDS.ordinal()] == 0) {
                 CheckBox finn = findViewById(R.id.finn_edwards);
                 finn.setVisibility(VISIBLE);
                 finn.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 forgotten++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.FATHER_MATEO] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.FATHER_MATEO.ordinal()] == 0) {
                 CheckBox mateo = findViewById(R.id.father_mateo);
                 mateo.setVisibility(VISIBLE);
                 mateo.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
             } else {
                 forgotten++;
             }
-            if (globalVariables.InvestigatorsInUse[Investigator.CALVIN_WRIGHT] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.CALVIN_WRIGHT.ordinal()] == 0) {
                 CheckBox calvin = findViewById(R.id.calvin_wright);
                 calvin.setVisibility(VISIBLE);
                 calvin.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -417,7 +417,7 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Marie Lambeau
         if (marieOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.MARIE_LAMBEAU] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.MARIE_LAMBEAU.ordinal()] == 0) {
                 CheckBox marieBox = findViewById(R.id.marie_lambeau);
                 marieBox.setVisibility(VISIBLE);
                 marieBox.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -428,7 +428,7 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Norman Withers
         if (normanOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.NORMAN_WITHERS] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.NORMAN_WITHERS.ordinal()] == 0) {
                 CheckBox normanBox = findViewById(R.id.norman_withers);
                 normanBox.setVisibility(VISIBLE);
                 normanBox.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -439,7 +439,7 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Carolyn Fern
         if (carolynOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.CAROLYN_FERN] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.CAROLYN_FERN.ordinal()] == 0) {
                 CheckBox carolynBox = findViewById(R.id.carolyn_fern);
                 carolynBox.setVisibility(VISIBLE);
                 carolynBox.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -450,7 +450,7 @@ public class EditTeamActivity extends AppCompatActivity {
 
         // Silas Marsh
         if (silasOwned) {
-            if (globalVariables.InvestigatorsInUse[Investigator.SILAS_MARSH] == 0) {
+            if (globalVariables.InvestigatorsInUse[Investigator.Name.SILAS_MARSH.ordinal()] == 0) {
                 CheckBox silasBox = findViewById(R.id.silas_marsh);
                 silasBox.setVisibility(VISIBLE);
                 silasBox.setOnCheckedChangeListener(new InvestigatorsCheckedChangeListener());
@@ -519,14 +519,14 @@ public class EditTeamActivity extends AppCompatActivity {
             switch (buttonView.getId()) {
                 case R.id.roland_banks:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.ROLAND_BANKS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.ROLAND_BANKS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.ROLAND_BANKS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ROLAND_BANKS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -535,14 +535,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.skids_otoole:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.SKIDS_OTOOLE);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.SKIDS_OTOOLE.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.SKIDS_OTOOLE) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SKIDS_OTOOLE.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -551,14 +551,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.agnes_baker:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.AGNES_BAKER);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.AGNES_BAKER.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.AGNES_BAKER) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.AGNES_BAKER.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -567,14 +567,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.daisy_walker:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.DAISY_WALKER);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.DAISY_WALKER.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.DAISY_WALKER) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.DAISY_WALKER.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -583,14 +583,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.wendy_adams:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.WENDY_ADAMS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.WENDY_ADAMS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.WENDY_ADAMS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.WENDY_ADAMS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -599,14 +599,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.zoey_samaras:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.ZOEY_SAMARAS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.ZOEY_SAMARAS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.ZOEY_SAMARAS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ZOEY_SAMARAS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -615,14 +615,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.rex_murphy:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.REX_MURPHY);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.REX_MURPHY.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.REX_MURPHY) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.REX_MURPHY.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -631,14 +631,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.jenny_barnes:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.JENNY_BARNES);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.JENNY_BARNES.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.JENNY_BARNES) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.JENNY_BARNES.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -647,14 +647,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.jim_culver:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.JIM_CULVER);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.JIM_CULVER.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.JIM_CULVER) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.JIM_CULVER.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -663,14 +663,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.ashcan_pete:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.ASHCAN_PETE);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.ASHCAN_PETE.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.ASHCAN_PETE) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ASHCAN_PETE.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -679,14 +679,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.mark_harrigan:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.MARK_HARRIGAN);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.MARK_HARRIGAN.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.MARK_HARRIGAN) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MARK_HARRIGAN.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -695,14 +695,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.minh_thi_phan:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.MINH_THI_PHAN);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.MINH_THI_PHAN.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.MINH_THI_PHAN) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MINH_THI_PHAN.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -711,14 +711,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.sefina_rousseau:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.SEFINA_ROUSSEAU);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.SEFINA_ROUSSEAU.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.SEFINA_ROUSSEAU) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SEFINA_ROUSSEAU.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -727,14 +727,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.akachi_onyele:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.AKACHI_ONYELE);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.AKACHI_ONYELE.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.AKACHI_ONYELE) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.AKACHI_ONYELE.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -743,14 +743,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.william_yorick:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.WILLIAM_YORICK);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.WILLIAM_YORICK.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.WILLIAM_YORICK) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.WILLIAM_YORICK.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -759,14 +759,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.lola_hayes:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.LOLA_HAYES);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.LOLA_HAYES.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.LOLA_HAYES) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.LOLA_HAYES.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -775,14 +775,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.leo_anderson:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.LEO_ANDERSON);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.LEO_ANDERSON.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.LEO_ANDERSON) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.LEO_ANDERSON.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -791,14 +791,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.ursula_downs:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.URSULA_DOWNS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.URSULA_DOWNS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.URSULA_DOWNS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.URSULA_DOWNS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -807,14 +807,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.finn_edwards:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.FINN_EDWARDS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.FINN_EDWARDS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.FINN_EDWARDS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.FINN_EDWARDS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -823,14 +823,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.father_mateo:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.FATHER_MATEO);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.FATHER_MATEO.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.FATHER_MATEO) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.FATHER_MATEO.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -839,14 +839,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.calvin_wright:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.CALVIN_WRIGHT);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.CALVIN_WRIGHT.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.CALVIN_WRIGHT) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.CALVIN_WRIGHT.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -855,14 +855,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.marie_lambeau:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.MARIE_LAMBEAU);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.MARIE_LAMBEAU.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.MARIE_LAMBEAU) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MARIE_LAMBEAU.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -871,14 +871,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.norman_withers:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.NORMAN_WITHERS);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.NORMAN_WITHERS.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.NORMAN_WITHERS) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.NORMAN_WITHERS.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -887,14 +887,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.carolyn_fern:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.CAROLYN_FERN);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.CAROLYN_FERN.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.CAROLYN_FERN) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.CAROLYN_FERN.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -903,14 +903,14 @@ public class EditTeamActivity extends AppCompatActivity {
                     break;
                 case R.id.silas_marsh:
                     if (isChecked && investigatorsCount < 4) {
-                        globalVariables.InvestigatorNames.add(Investigator.SILAS_MARSH);
+                        globalVariables.InvestigatorNames.add(Investigator.Name.SILAS_MARSH.ordinal());
                         investigatorsCount++;
                     } else if (isChecked) {
                         buttonView.setChecked(false);
                     } else {
                         investigatorsCount--;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.SILAS_MARSH) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SILAS_MARSH.ordinal()) {
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
                             }
@@ -928,10 +928,10 @@ public class EditTeamActivity extends AppCompatActivity {
                         // to the saved investigator
                         if (buttonView.getId() < 100) {
                             globalVariables.InvestigatorNames.add(globalVariables.Investigators.get(buttonView.getId())
-                                    .Name);
+                                    .name.ordinal());
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
                                 if (globalVariables.InvestigatorNames.get(i) == globalVariables.Investigators.get
-                                        (buttonView.getId()).Name) {
+                                        (buttonView.getId()).name.ordinal()) {
                                     switch (i) {
                                         case 0:
                                             investigatorOne = globalVariables.Investigators.get(buttonView.getId());
@@ -953,10 +953,10 @@ public class EditTeamActivity extends AppCompatActivity {
                         // saved investigator
                         else {
                             globalVariables.InvestigatorNames.add(globalVariables.SavedInvestigators.get(buttonView
-                                    .getId() - 100).Name);
+                                    .getId() - 100).name.ordinal());
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
                                 if (globalVariables.InvestigatorNames.get(i) == globalVariables.SavedInvestigators.get
-                                        (buttonView.getId() - 100).Name) {
+                                        (buttonView.getId() - 100).name.ordinal()) {
                                     switch (i) {
                                         case 0:
                                             investigatorOne = globalVariables.SavedInvestigators.get(buttonView.getId
@@ -990,12 +990,12 @@ public class EditTeamActivity extends AppCompatActivity {
                             if (buttonView.getId() >= 100) {
                                 // Removes the investigator
                                 if (globalVariables.InvestigatorNames.get(i) == globalVariables.SavedInvestigators.get
-                                        (buttonView.getId() - 100).Name) {
+                                        (buttonView.getId() - 100).name.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
                             } else if (globalVariables.InvestigatorNames.get(i) == globalVariables.Investigators.get
-                                    (buttonView.getId()).Name) {
+                                    (buttonView.getId()).name.ordinal()) {
                                 // Removes the investigator
                                 removeInvestigator = i;
                                 globalVariables.InvestigatorNames.remove(i);
@@ -1069,7 +1069,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorOne != null) {
                 investigatorOneLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorOne;
-                String nameOne = investigatorNames[currentInvestigator.Name];
+                String nameOne = investigatorNames[currentInvestigator.name.ordinal()];
                 investigatorOneName.setText(nameOne);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1097,7 +1097,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorTwo != null) {
                 investigatorTwoLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorTwo;
-                String nameTwo = investigatorNames[currentInvestigator.Name];
+                String nameTwo = investigatorNames[currentInvestigator.name.ordinal()];
                 investigatorTwoName.setText(nameTwo);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1125,7 +1125,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorThree != null) {
                 investigatorThreeLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorThree;
-                String nameThree = investigatorNames[currentInvestigator.Name];
+                String nameThree = investigatorNames[currentInvestigator.name.ordinal()];
                 investigatorThreeName.setText(nameThree);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1153,7 +1153,7 @@ public class EditTeamActivity extends AppCompatActivity {
             if (investigatorFour != null) {
                 investigatorFourLayout.setVisibility(VISIBLE);
                 Investigator currentInvestigator = investigatorFour;
-                String nameFour = investigatorNames[currentInvestigator.Name];
+                String nameFour = investigatorNames[currentInvestigator.name.ordinal()];
                 investigatorFourName.setText(nameFour);
                 if (currentInvestigator.PlayerName != null && currentInvestigator.PlayerName.length() > 0) {
                     String playerName = currentInvestigator.PlayerName + " ";
@@ -1454,12 +1454,12 @@ public class EditTeamActivity extends AppCompatActivity {
                 // Add investigators who have been selected
                 for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
                     for (int a = 0; a < globalVariables.Investigators.size(); a++) {
-                        if (globalVariables.Investigators.get(a).Name == globalVariables.InvestigatorNames.get(i)) {
+                        if (globalVariables.Investigators.get(a).name.ordinal() == globalVariables.InvestigatorNames.get(i)) {
                             globalVariables.Investigators.get(a).Status = 999;
                         }
                     }
                     for (int a = 0; a < globalVariables.SavedInvestigators.size(); a++) {
-                        if (globalVariables.SavedInvestigators.get(a).Name == globalVariables.InvestigatorNames.get
+                        if (globalVariables.SavedInvestigators.get(a).name.ordinal() == globalVariables.InvestigatorNames.get
                                 (i)) {
                             globalVariables.SavedInvestigators.get(a).Status = 999;
                         }
@@ -1493,7 +1493,7 @@ public class EditTeamActivity extends AppCompatActivity {
 
                 for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
                     if (globalVariables.InvestigatorsInUse[globalVariables.InvestigatorNames.get(i)] == 0) {
-                        globalVariables.Investigators.add(new Investigator(globalVariables.InvestigatorNames.get(i),
+                        globalVariables.Investigators.add(new Investigator(Investigator.Name.values()[globalVariables.InvestigatorNames.get(i)],
                                 globalVariables.PlayerNames[i], globalVariables.DeckNames[i], globalVariables
                                 .DeckLists[i]));
                     }

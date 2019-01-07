@@ -380,55 +380,55 @@ public class LoadCampaignActivity extends AppCompatActivity {
                         (CampaignEntry.COLUMN_DUNWICH_COMPLETED)));
                 globalVariables.CarcosaCompleted = (campaignCursor.getInt(campaignCursor.getColumnIndexOrThrow
                         (CampaignEntry.COLUMN_CARCOSA_COMPLETED)));
-                globalVariables.InvestigatorsInUse[Investigator.ROLAND_BANKS] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.ROLAND_BANKS.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_ROLAND_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.DAISY_WALKER] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.DAISY_WALKER.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_DAISY_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.AGNES_BAKER] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.AGNES_BAKER.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_AGNES_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.SKIDS_OTOOLE] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.SKIDS_OTOOLE.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_SKIDS_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.WENDY_ADAMS] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.WENDY_ADAMS.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_WENDY_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.ZOEY_SAMARAS] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.ZOEY_SAMARAS.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_ZOEY_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.REX_MURPHY] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.REX_MURPHY.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_REX_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.JENNY_BARNES] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.JENNY_BARNES.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_JENNY_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.JIM_CULVER] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.JIM_CULVER.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_JIM_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.ASHCAN_PETE] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.ASHCAN_PETE.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_PETE_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.MARK_HARRIGAN] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.MARK_HARRIGAN.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_MARK_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.MINH_THI_PHAN] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.MINH_THI_PHAN.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_MINH_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.SEFINA_ROUSSEAU] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.SEFINA_ROUSSEAU.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_SEFINA_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.AKACHI_ONYELE] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.AKACHI_ONYELE.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_AKACHI_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.WILLIAM_YORICK] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.WILLIAM_YORICK.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_WILLIAM_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.LOLA_HAYES] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.LOLA_HAYES.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_LOLA_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.MARIE_LAMBEAU] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.MARIE_LAMBEAU.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_MARIE_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.NORMAN_WITHERS] = campaignCursor.getInt
+                globalVariables.InvestigatorsInUse[Investigator.Name.NORMAN_WITHERS.ordinal()] = campaignCursor.getInt
                         (campaignCursor.getColumnIndexOrThrow(CampaignEntry.COLUMN_NORMAN_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.CAROLYN_FERN] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.CAROLYN_FERN.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_CAROLYN_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.SILAS_MARSH] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.SILAS_MARSH.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_SILAS_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.LEO_ANDERSON] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.LEO_ANDERSON.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_LEO_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.URSULA_DOWNS] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.URSULA_DOWNS.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_URSULA_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.FINN_EDWARDS] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.FINN_EDWARDS.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_FINN_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.FATHER_MATEO] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.FATHER_MATEO.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_MATEO_INUSE));
-                globalVariables.InvestigatorsInUse[Investigator.CALVIN_WRIGHT] = campaignCursor.getInt(campaignCursor
+                globalVariables.InvestigatorsInUse[Investigator.Name.CALVIN_WRIGHT.ordinal()] = campaignCursor.getInt(campaignCursor
                         .getColumnIndexOrThrow(CampaignEntry.COLUMN_CALVIN_INUSE));
                 globalVariables.Rougarou = (campaignCursor.getInt(campaignCursor.getColumnIndexOrThrow
                         (CampaignEntry.COLUMN_ROUGAROU_STATUS)));
@@ -480,6 +480,7 @@ public class LoadCampaignActivity extends AppCompatActivity {
                         .COLUMN_INVESTIGATOR_STATUS));
                 int name = investigatorCursor.getInt(investigatorCursor.getColumnIndexOrThrow(InvestigatorEntry
                         .COLUMN_INVESTIGATOR_NAME));
+                Investigator.Name investigator = Investigator.Name.values()[name];
                 String player = investigatorCursor.getString(investigatorCursor.getColumnIndexOrThrow(InvestigatorEntry
                         .COLUMN_INVESTIGATOR_PLAYER));
                 String deckName = investigatorCursor.getString(investigatorCursor.getColumnIndex(InvestigatorEntry
@@ -487,7 +488,7 @@ public class LoadCampaignActivity extends AppCompatActivity {
                 String deck = investigatorCursor.getString(investigatorCursor.getColumnIndexOrThrow(InvestigatorEntry
                         .COLUMN_INVESTIGATOR_DECKLIST));
                 if (status == 1 || status == 2) {
-                    globalVariables.Investigators.add(new Investigator(name, player, deckName, deck));
+                    globalVariables.Investigators.add(new Investigator(investigator, player, deckName, deck));
                     globalVariables.Investigators.get(i).Status = (status);
                     globalVariables.Investigators.get(i).Damage = (investigatorCursor.getInt
                             (investigatorCursor.getColumnIndexOrThrow(InvestigatorEntry
@@ -513,7 +514,7 @@ public class LoadCampaignActivity extends AppCompatActivity {
                             .getColumnIndex(InvestigatorEntry.COLUMN_INVESTIGATOR_RESUPPLIES_ONE));
                     count++;
                 } else if (status == 3) {
-                    globalVariables.SavedInvestigators.add(new Investigator(name, player, deckName, deck));
+                    globalVariables.SavedInvestigators.add(new Investigator(investigator, player, deckName, deck));
                     globalVariables.SavedInvestigators.get(i - count).Status = (status);
                     globalVariables.SavedInvestigators.get(i - count).Damage = (investigatorCursor.getInt
                             (investigatorCursor.getColumnIndexOrThrow(InvestigatorEntry

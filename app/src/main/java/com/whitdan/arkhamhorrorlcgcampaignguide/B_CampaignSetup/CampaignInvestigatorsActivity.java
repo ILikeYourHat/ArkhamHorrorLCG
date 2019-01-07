@@ -296,14 +296,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                 switch (buttonView.getId()) {
                     case R.id.roland_banks:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.ROLAND_BANKS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.ROLAND_BANKS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.ROLAND_BANKS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ROLAND_BANKS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -312,14 +312,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.skids_otoole:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.SKIDS_OTOOLE);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.SKIDS_OTOOLE.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.SKIDS_OTOOLE) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SKIDS_OTOOLE.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -328,14 +328,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.agnes_baker:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.AGNES_BAKER);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.AGNES_BAKER.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.AGNES_BAKER) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.AGNES_BAKER.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -344,14 +344,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.daisy_walker:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.DAISY_WALKER);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.DAISY_WALKER.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.DAISY_WALKER) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.DAISY_WALKER.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -360,14 +360,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.wendy_adams:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.WENDY_ADAMS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.WENDY_ADAMS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.WENDY_ADAMS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.WENDY_ADAMS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -376,14 +376,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.zoey_samaras:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.ZOEY_SAMARAS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.ZOEY_SAMARAS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.ZOEY_SAMARAS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ZOEY_SAMARAS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -392,14 +392,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.rex_murphy:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.REX_MURPHY);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.REX_MURPHY.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.REX_MURPHY) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.REX_MURPHY.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -408,14 +408,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.jenny_barnes:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.JENNY_BARNES);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.JENNY_BARNES.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.JENNY_BARNES) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.JENNY_BARNES.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -424,14 +424,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.jim_culver:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.JIM_CULVER);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.JIM_CULVER.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.JIM_CULVER) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.JIM_CULVER.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -440,14 +440,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.ashcan_pete:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.ASHCAN_PETE);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.ASHCAN_PETE.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.ASHCAN_PETE) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.ASHCAN_PETE.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -456,14 +456,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.mark_harrigan:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.MARK_HARRIGAN);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.MARK_HARRIGAN.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.MARK_HARRIGAN) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MARK_HARRIGAN.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -472,14 +472,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.minh_thi_phan:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.MINH_THI_PHAN);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.MINH_THI_PHAN.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.MINH_THI_PHAN) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MINH_THI_PHAN.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -488,14 +488,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.sefina_rousseau:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.SEFINA_ROUSSEAU);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.SEFINA_ROUSSEAU.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.SEFINA_ROUSSEAU) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SEFINA_ROUSSEAU.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -504,14 +504,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.akachi_onyele:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.AKACHI_ONYELE);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.AKACHI_ONYELE.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.AKACHI_ONYELE) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.AKACHI_ONYELE.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -520,14 +520,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.william_yorick:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.WILLIAM_YORICK);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.WILLIAM_YORICK.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.WILLIAM_YORICK) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.WILLIAM_YORICK.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -536,14 +536,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.lola_hayes:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.LOLA_HAYES);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.LOLA_HAYES.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.LOLA_HAYES) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.LOLA_HAYES.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -552,14 +552,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.leo_anderson:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.LEO_ANDERSON);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.LEO_ANDERSON.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.LEO_ANDERSON) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.LEO_ANDERSON.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -568,14 +568,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.ursula_downs:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.URSULA_DOWNS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.URSULA_DOWNS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.URSULA_DOWNS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.URSULA_DOWNS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -584,14 +584,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.finn_edwards:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.FINN_EDWARDS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.FINN_EDWARDS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.FINN_EDWARDS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.FINN_EDWARDS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -600,14 +600,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.father_mateo:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.FATHER_MATEO);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.FATHER_MATEO.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.FATHER_MATEO) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.FATHER_MATEO.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -616,14 +616,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.calvin_wright:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.CALVIN_WRIGHT);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.CALVIN_WRIGHT.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.CALVIN_WRIGHT) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.CALVIN_WRIGHT.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -632,14 +632,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.marie_lambeau:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.MARIE_LAMBEAU);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.MARIE_LAMBEAU.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.MARIE_LAMBEAU) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.MARIE_LAMBEAU.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -648,14 +648,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.norman_withers:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.NORMAN_WITHERS);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.NORMAN_WITHERS.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.NORMAN_WITHERS) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.NORMAN_WITHERS.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -664,14 +664,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.carolyn_fern:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.CAROLYN_FERN);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.CAROLYN_FERN.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.CAROLYN_FERN) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.CAROLYN_FERN.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -680,14 +680,14 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         break;
                     case R.id.silas_marsh:
                         if (isChecked && investigators < 4) {
-                            globalVariables.InvestigatorNames.add(Investigator.SILAS_MARSH);
+                            globalVariables.InvestigatorNames.add(Investigator.Name.SILAS_MARSH.ordinal());
                             investigators++;
                         } else if (isChecked) {
                             buttonView.setChecked(false);
                         } else {
                             investigators--;
                             for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                                if (globalVariables.InvestigatorNames.get(i) == Investigator.SILAS_MARSH) {
+                                if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.SILAS_MARSH.ordinal()) {
                                     removeInvestigator = i;
                                     globalVariables.InvestigatorNames.remove(i);
                                 }
@@ -1094,13 +1094,13 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
                         globalVariables.SavedInvestigators.clear();
                         boolean lola = false;
                         for (int i = 0; i < globalVariables.InvestigatorNames.size(); i++) {
-                            globalVariables.Investigators.add(new Investigator(globalVariables.InvestigatorNames.get(i),
+                            globalVariables.Investigators.add(new Investigator(Investigator.Name.values()[globalVariables.InvestigatorNames.get(i)],
                                     globalVariables.PlayerNames[i], globalVariables.DeckNames[i], globalVariables
                                     .DeckLists[i]));
                             globalVariables.InvestigatorsInUse[globalVariables.InvestigatorNames.get(i)] = 1;
 
                             // Check if Lola Hayes is in use for Carcosa prologue
-                            if (globalVariables.InvestigatorNames.get(i) == Investigator.LOLA_HAYES) {
+                            if (globalVariables.InvestigatorNames.get(i) == Investigator.Name.LOLA_HAYES.ordinal()) {
                                 lola = true;
                             }
                         }
@@ -1175,55 +1175,55 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
         campaignValues.put(CampaignEntry.COLUMN_CURRENT_SCENARIO, globalVariables.CurrentScenario);
         campaignValues.put(CampaignEntry.COLUMN_DIFFICULTY, globalVariables.CurrentDifficulty);
         campaignValues.put(CampaignEntry.COLUMN_ROLAND_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .ROLAND_BANKS]);
+                .Name.ROLAND_BANKS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_DAISY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .DAISY_WALKER]);
+                .Name.DAISY_WALKER.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_SKIDS_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .SKIDS_OTOOLE]);
+                .Name.SKIDS_OTOOLE.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_AGNES_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .AGNES_BAKER]);
+                .Name.AGNES_BAKER.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_WENDY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .WENDY_ADAMS]);
+                .Name.WENDY_ADAMS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_ZOEY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .ZOEY_SAMARAS]);
+                .Name.ZOEY_SAMARAS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_REX_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .REX_MURPHY]);
+                .Name.REX_MURPHY.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_JENNY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .JENNY_BARNES]);
+                .Name.JENNY_BARNES.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_JIM_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .JIM_CULVER]);
+                .Name.JIM_CULVER.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_PETE_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .ASHCAN_PETE]);
+                .Name.ASHCAN_PETE.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_MARK_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .MARK_HARRIGAN]);
+                .Name.MARK_HARRIGAN.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_MINH_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .MINH_THI_PHAN]);
+                .Name.MINH_THI_PHAN.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_AKACHI_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .AKACHI_ONYELE]);
+                .Name.AKACHI_ONYELE.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_SEFINA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .SEFINA_ROUSSEAU]);
+                .Name.SEFINA_ROUSSEAU.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_WILLIAM_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .WILLIAM_YORICK]);
+                .Name.WILLIAM_YORICK.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_LOLA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .LOLA_HAYES]);
+                .Name.LOLA_HAYES.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_MARIE_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .MARIE_LAMBEAU]);
+                .Name.MARIE_LAMBEAU.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_NORMAN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .NORMAN_WITHERS]);
+                .Name.NORMAN_WITHERS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_CAROLYN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .CAROLYN_FERN]);
+                .Name.CAROLYN_FERN.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_SILAS_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .SILAS_MARSH]);
+                .Name.SILAS_MARSH.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_LEO_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .LEO_ANDERSON]);
+                .Name.LEO_ANDERSON.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_URSULA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .URSULA_DOWNS]);
+                .Name.URSULA_DOWNS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_FINN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .FINN_EDWARDS]);
+                .Name.FINN_EDWARDS.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_MATEO_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .FATHER_MATEO]);
+                .Name.FATHER_MATEO.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_CALVIN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .CALVIN_WRIGHT]);
+                .Name.CALVIN_WRIGHT.ordinal()]);
         long newCampaignId = db.insert(CampaignEntry.TABLE_NAME, null, campaignValues);
         globalVariables.CampaignID = newCampaignId;
 
@@ -1265,7 +1265,7 @@ public class CampaignInvestigatorsActivity extends AppCompatActivity {
             investigatorValues.put(ArkhamContract.InvestigatorEntry.PARENT_ID, newCampaignId);
             investigatorValues.put(ArkhamContract.InvestigatorEntry.INVESTIGATOR_ID, i);
             investigatorValues.put(ArkhamContract.InvestigatorEntry.COLUMN_INVESTIGATOR_NAME, globalVariables
-                    .Investigators.get(i).Name);
+                    .Investigators.get(i).name.ordinal());
             investigatorValues.put(ArkhamContract.InvestigatorEntry.COLUMN_INVESTIGATOR_STATUS, 1);
             investigatorValues.put(ArkhamContract.InvestigatorEntry.COLUMN_INVESTIGATOR_DAMAGE, 0);
             investigatorValues.put(ArkhamContract.InvestigatorEntry.COLUMN_INVESTIGATOR_HORROR, 0);

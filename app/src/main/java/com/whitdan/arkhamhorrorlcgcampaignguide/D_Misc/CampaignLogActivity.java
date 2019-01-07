@@ -717,7 +717,7 @@ public class CampaignLogActivity extends AppCompatActivity {
                 if(i > 0){
                     suppliesBuilder.append("\n");
                 }
-                suppliesBuilder.append(investigatorNames[globalVariables.Investigators.get(i).Name]);
+                suppliesBuilder.append(investigatorNames[globalVariables.Investigators.get(i).name.ordinal()]);
                 suppliesBuilder.append("\n");
 
                 boolean supplies = false;

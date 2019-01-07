@@ -142,7 +142,7 @@ public class EditStatsActivity extends AppCompatActivity {
                 // Set investigator name
                 TextView investigatorNameView = listItemView.findViewById(R.id.investigator_name);
                 String[] investigatorNames = getContext().getResources().getStringArray(R.array.investigators);
-                String name = investigatorNames[currentInvestigator.Name] + " ";
+                String name = investigatorNames[currentInvestigator.name.ordinal()] + " ";
                 investigatorNameView.setText(name);
                 investigatorNameView.setTypeface(teutonic);
                 String playerName = " ";

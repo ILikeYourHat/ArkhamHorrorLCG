@@ -410,7 +410,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         setsImage.setImageResource(R.drawable.curtain_sets);
                         boolean lola = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            if (globalVariables.Investigators.get(i).Name == Investigator.LOLA_HAYES) {
+                            if (globalVariables.Investigators.get(i).name == Investigator.Name.LOLA_HAYES) {
                                 lola = true;
                             }
                         }
@@ -618,9 +618,9 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         additional.setText(R.string.untamed_additional);
                         boolean untamedLeader = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            switch (globalVariables.Investigators.get(i).Name) {
-                                case Investigator.URSULA_DOWNS:
-                                case Investigator.LEO_ANDERSON:
+                            switch (globalVariables.Investigators.get(i).name) {
+                                case URSULA_DOWNS:
+                                case LEO_ANDERSON:
                                     untamedLeader = true;
                                     break;
                             }
@@ -638,9 +638,9 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         additional.setText(R.string.eztli_additional);
                         boolean eztliLeader = false;
                         for (int i = 0; i < globalVariables.Investigators.size(); i++) {
-                            switch (globalVariables.Investigators.get(i).Name) {
-                                case Investigator.URSULA_DOWNS:
-                                case Investigator.LEO_ANDERSON:
+                            switch (globalVariables.Investigators.get(i).name) {
+                                case URSULA_DOWNS:
+                                case LEO_ANDERSON:
                                     eztliLeader = true;
                                     break;
                             }
@@ -662,7 +662,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                             eztliBuilder.append(getString(R.string.eztli_additional_lead));
                         }
                         if(globalVariables.LowRations > 0){
-                            eztliBuilder.append(Integer.toString(globalVariables.LowRations));
+                            eztliBuilder.append(globalVariables.LowRations);
                             eztliBuilder.append(" ");
                             if(globalVariables.LowRations == 1) {
                                 eztliBuilder.append(getString(R.string.eztli_low_rations_single_investigator));
@@ -703,7 +703,7 @@ public class ScenarioSetupActivity extends AppCompatActivity {
                         rules.setText(R.string.threads_rules);
                         break;
                     case 10:
-                        if(globalVariables.IchtacasTale == 1 && globalVariables.IchtacasTale == 1){
+                        if(globalVariables.IchtacasTale == 1){
                             sets.setText(R.string.boundary_sets_one);
 //                            setsImage.setImageResource(R.drawable.boundary_sets_one); // TODO
                         } else if(globalVariables.Ichtaca == 2 && globalVariables.Custody == 1 && globalVariables
