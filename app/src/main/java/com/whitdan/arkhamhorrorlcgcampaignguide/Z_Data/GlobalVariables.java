@@ -42,7 +42,7 @@ public class GlobalVariables extends Application {
      */
     public ArrayList<Investigator> Investigators = new ArrayList<>();
     public ArrayList<Investigator> SavedInvestigators = new ArrayList<>();
-    public ArrayList<Investigator.Name> InvestigatorNames = new ArrayList<>();
+    public ArrayList<InvestigatorCharacter> InvestigatorNames = new ArrayList<>();
     public String[] PlayerNames = new String[4];
     public String[] DeckNames = new String[4];
     public String[] DeckLists = new String[4];

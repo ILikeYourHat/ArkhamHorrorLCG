@@ -33,6 +33,7 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract.Investigat
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamDbHelper;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Investigator;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCharacter;
 
 import java.util.ArrayList;
 
@@ -4093,54 +4094,31 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
         campaignValues.put(CampaignEntry.COLUMN_NIGHT_COMPLETED, globalVariables.NightCompleted);
         campaignValues.put(CampaignEntry.COLUMN_DUNWICH_COMPLETED, globalVariables.DunwichCompleted);
         campaignValues.put(CampaignEntry.COLUMN_CARCOSA_COMPLETED, globalVariables.CarcosaCompleted);
-        campaignValues.put(CampaignEntry.COLUMN_ROLAND_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.ROLAND_BANKS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_DAISY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.DAISY_WALKER.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_SKIDS_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.SKIDS_OTOOLE.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_AGNES_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.AGNES_BAKER.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_WENDY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.WENDY_ADAMS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_ZOEY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.ZOEY_SAMARAS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_REX_INUSE, globalVariables.InvestigatorsInUse[Investigator.Name.REX_MURPHY.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_JENNY_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.JENNY_BARNES.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_JIM_INUSE, globalVariables.InvestigatorsInUse[Investigator.Name.JIM_CULVER.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_PETE_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.ASHCAN_PETE.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_MARK_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.MARK_HARRIGAN.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_MINH_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.MINH_THI_PHAN.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_SEFINA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.SEFINA_ROUSSEAU.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_AKACHI_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.AKACHI_ONYELE.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_WILLIAM_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.WILLIAM_YORICK.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_LOLA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.LOLA_HAYES.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_MARIE_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.MARIE_LAMBEAU.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_NORMAN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.NORMAN_WITHERS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_CAROLYN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.CAROLYN_FERN.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_SILAS_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.SILAS_MARSH.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_LEO_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.LEO_ANDERSON.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_URSULA_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.URSULA_DOWNS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_FINN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.FINN_EDWARDS.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_MATEO_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.FATHER_MATEO.ordinal()]);
-        campaignValues.put(CampaignEntry.COLUMN_CALVIN_INUSE, globalVariables.InvestigatorsInUse[Investigator
-                .Name.CALVIN_WRIGHT.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_ROLAND_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.ROLAND_BANKS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_DAISY_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.DAISY_WALKER.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_SKIDS_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.SKIDS_OTOOLE.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_AGNES_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.AGNES_BAKER.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_WENDY_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.WENDY_ADAMS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_ZOEY_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.ZOEY_SAMARAS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_REX_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.REX_MURPHY.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_JENNY_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.JENNY_BARNES.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_JIM_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.JIM_CULVER.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_PETE_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.ASHCAN_PETE.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_MARK_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.MARK_HARRIGAN.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_MINH_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.MINH_THI_PHAN.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_SEFINA_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.SEFINA_ROUSSEAU.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_AKACHI_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.AKACHI_ONYELE.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_WILLIAM_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.WILLIAM_YORICK.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_LOLA_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.LOLA_HAYES.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_MARIE_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.MARIE_LAMBEAU.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_NORMAN_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.NORMAN_WITHERS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_CAROLYN_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.CAROLYN_FERN.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_SILAS_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.SILAS_MARSH.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_LEO_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.LEO_ANDERSON.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_URSULA_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.URSULA_DOWNS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_FINN_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.FINN_EDWARDS.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_MATEO_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.FATHER_MATEO.ordinal()]);
+        campaignValues.put(CampaignEntry.COLUMN_CALVIN_INUSE, globalVariables.InvestigatorsInUse[InvestigatorCharacter.CALVIN_WRIGHT.ordinal()]);
         campaignValues.put(CampaignEntry.COLUMN_ROUGAROU_STATUS, globalVariables.Rougarou);
         campaignValues.put(CampaignEntry.COLUMN_STRANGE_SOLUTION, globalVariables.StrangeSolution);
         campaignValues.put(CampaignEntry.COLUMN_ARCHAIC_GLYPHS, globalVariables.ArchaicGlyphs);
