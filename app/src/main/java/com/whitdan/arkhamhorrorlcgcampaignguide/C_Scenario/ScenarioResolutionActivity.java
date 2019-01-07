@@ -3544,25 +3544,25 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                                 globalVariables.Theatre = 3;
                                 if (investigatorOne.isChecked()) {
                                     globalVariables.Investigators.get(0).AvailableXP += 2;
-                                    globalVariables.InvOneReadAct = globalVariables.Investigators.get(0).card.getName();
+                                    globalVariables.InvOneReadAct = globalVariables.Investigators.get(0).card.ordinal();
                                 } else {
                                     globalVariables.InvOneReadAct = 0;
                                 }
                                 if (investigatorTwo.isChecked()) {
                                     globalVariables.Investigators.get(1).AvailableXP += 2;
-                                    globalVariables.InvTwoReadAct = globalVariables.Investigators.get(1).card.getName();
+                                    globalVariables.InvTwoReadAct = globalVariables.Investigators.get(1).card.ordinal();
                                 } else {
                                     globalVariables.InvTwoReadAct = 0;
                                 }
                                 if (investigatorThree.isChecked()) {
                                     globalVariables.Investigators.get(2).AvailableXP += 2;
-                                    globalVariables.InvThreeReadAct = globalVariables.Investigators.get(2).card.getName();
+                                    globalVariables.InvThreeReadAct = globalVariables.Investigators.get(2).card.ordinal();
                                 } else {
                                     globalVariables.InvThreeReadAct = 0;
                                 }
                                 if (investigatorFour.isChecked()) {
                                     globalVariables.Investigators.get(3).AvailableXP += 2;
-                                    globalVariables.InvFourReadAct = globalVariables.Investigators.get(3).card.getName();
+                                    globalVariables.InvFourReadAct = globalVariables.Investigators.get(3).card.ordinal();
                                 } else {
                                     globalVariables.InvFourReadAct = 0;
                                 }
@@ -3667,22 +3667,22 @@ public class ScenarioResolutionActivity extends AppCompatActivity {
                         }
                         if (globalVariables.ScenarioResolution != 0) {
                             if (investigatorOne.isChecked()) {
-                                globalVariables.InvOnePossessed = globalVariables.Investigators.get(0).card.getName();
+                                globalVariables.InvOnePossessed = globalVariables.Investigators.get(0).card.ordinal();
                             } else {
                                 globalVariables.InvOnePossessed = 0;
                             }
                             if (investigatorTwo.isChecked()) {
-                                globalVariables.InvTwoPossessed = globalVariables.Investigators.get(1).card.getName();
+                                globalVariables.InvTwoPossessed = globalVariables.Investigators.get(1).card.ordinal();
                             } else {
                                 globalVariables.InvTwoPossessed = 0;
                             }
                             if (investigatorThree.isChecked()) {
-                                globalVariables.InvThreePossessed = globalVariables.Investigators.get(2).card.getName();
+                                globalVariables.InvThreePossessed = globalVariables.Investigators.get(2).card.ordinal();
                             } else {
                                 globalVariables.InvThreePossessed = 0;
                             }
                             if (investigatorFour.isChecked()) {
-                                globalVariables.InvFourPossessed = globalVariables.Investigators.get(3).card.getName();
+                                globalVariables.InvFourPossessed = globalVariables.Investigators.get(3).card.ordinal();
                             } else {
                                 globalVariables.InvFourPossessed = 0;
                             }
