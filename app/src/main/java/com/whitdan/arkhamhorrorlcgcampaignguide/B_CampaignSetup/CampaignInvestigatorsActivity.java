@@ -26,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioInterludeActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.ChooseSuppliesActivity;
@@ -49,7 +50,7 @@ import static android.view.View.VISIBLE;
                                     name for the campaign, also includes a button to take you to chaos bag setup
  */
 
-public class CampaignInvestigatorsActivity extends AppCompatActivity {
+public class CampaignInvestigatorsActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     int investigators;

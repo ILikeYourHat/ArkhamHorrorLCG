@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignIntroductionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
@@ -18,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
     goes to CampaignSetup
  */
 
-public class ChooseCampaignActivity extends AppCompatActivity {
+public class ChooseCampaignActivity extends BaseActivity {
 
     GlobalVariables globalVariables;
 

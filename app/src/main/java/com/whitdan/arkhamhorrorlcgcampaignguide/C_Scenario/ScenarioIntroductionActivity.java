@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
@@ -20,7 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class ScenarioIntroductionActivity extends AppCompatActivity {
+public class ScenarioIntroductionActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     static boolean progress;

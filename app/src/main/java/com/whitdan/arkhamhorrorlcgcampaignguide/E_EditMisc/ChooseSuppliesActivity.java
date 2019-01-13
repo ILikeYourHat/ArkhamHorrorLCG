@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignInvestigatorsActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
@@ -26,7 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class ChooseSuppliesActivity extends AppCompatActivity {
+public class ChooseSuppliesActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     int[] availableSupplies;

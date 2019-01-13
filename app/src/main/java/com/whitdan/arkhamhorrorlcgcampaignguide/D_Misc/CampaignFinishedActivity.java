@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.CampaignIntroductionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
@@ -41,7 +42,7 @@ import androidx.core.app.NavUtils;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class CampaignFinishedActivity extends AppCompatActivity {
+public class CampaignFinishedActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
 

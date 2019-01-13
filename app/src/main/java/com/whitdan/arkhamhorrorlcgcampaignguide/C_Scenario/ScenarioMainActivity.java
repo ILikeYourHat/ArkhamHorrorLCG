@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.ChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.EditTeamActivity;
@@ -41,7 +42,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class ScenarioMainActivity extends AppCompatActivity {
+public class ScenarioMainActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     ArkhamDbHelper mDbHelper;

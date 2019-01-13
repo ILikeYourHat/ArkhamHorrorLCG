@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignFinishedActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
@@ -26,7 +27,7 @@ import androidx.core.app.NavUtils;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class ScenarioInterludeActivity extends AppCompatActivity {
+public class ScenarioInterludeActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     int resolution;

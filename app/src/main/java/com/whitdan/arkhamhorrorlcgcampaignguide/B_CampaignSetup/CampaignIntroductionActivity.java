@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioInterludeActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
@@ -37,7 +38,7 @@ import static android.view.View.VISIBLE;
     CampaignIntroductionActivity - Displays the introductory text for the campaign
  */
 
-public class CampaignIntroductionActivity extends AppCompatActivity {
+public class CampaignIntroductionActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
 

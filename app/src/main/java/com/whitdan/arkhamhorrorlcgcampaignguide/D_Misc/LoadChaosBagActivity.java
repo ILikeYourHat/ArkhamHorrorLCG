@@ -23,6 +23,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.CustomChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract;
@@ -37,7 +38,7 @@ import androidx.core.content.ContextCompat;
 
 import static android.view.View.VISIBLE;
 
-public class LoadChaosBagActivity extends AppCompatActivity {
+public class LoadChaosBagActivity extends BaseActivity {
 
     private static GlobalVariables globalVariables;
     private static ChaosBagListAdapter chaosBagListAdapter;

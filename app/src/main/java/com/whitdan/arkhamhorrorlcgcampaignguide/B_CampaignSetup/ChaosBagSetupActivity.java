@@ -15,6 +15,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
@@ -30,7 +31,7 @@ import static android.view.View.GONE;
                             that difficulty
  */
 
-public class ChaosBagSetupActivity extends AppCompatActivity {
+public class ChaosBagSetupActivity extends BaseActivity {
 
     GlobalVariables globalVariables;
     ArrayList<Integer> chaosbag;

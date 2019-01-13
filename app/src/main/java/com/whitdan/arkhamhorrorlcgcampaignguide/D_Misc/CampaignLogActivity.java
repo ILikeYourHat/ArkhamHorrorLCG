@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.EditLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
@@ -17,7 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.VISIBLE;
 
-public class CampaignLogActivity extends AppCompatActivity {
+public class CampaignLogActivity extends BaseActivity {
 
     GlobalVariables globalVariables;
 

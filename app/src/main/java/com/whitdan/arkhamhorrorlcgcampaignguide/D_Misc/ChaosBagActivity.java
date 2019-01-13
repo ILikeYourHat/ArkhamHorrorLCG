@@ -26,6 +26,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.ArkhamContract;
@@ -49,7 +50,7 @@ import static android.view.View.VISIBLE;
     drawing of tokens, additional tokens, and shows the makeup of the chaos bag
  */
 
-public class ChaosBagActivity extends AppCompatActivity {
+public class ChaosBagActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     static ArrayList<Integer> chaosbag;

@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignLogActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.ChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
@@ -23,7 +24,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static java.lang.Boolean.TRUE;
 
-public class ScenarioSetupActivity extends AppCompatActivity {
+public class ScenarioSetupActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
 

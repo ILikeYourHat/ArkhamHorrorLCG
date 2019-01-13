@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioResolutionActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
@@ -36,7 +37,7 @@ import androidx.core.content.ContextCompat;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 
-public class EditTeamActivity extends AppCompatActivity {
+public class EditTeamActivity extends BaseActivity {
 
     static GlobalVariables globalVariables;
     private static int investigatorsCount;

@@ -17,6 +17,7 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioInterludeActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.CampaignFinishedActivity;
@@ -40,7 +41,7 @@ import androidx.appcompat.app.AppCompatActivity;
     campaign, long clicking allows the deletion of the campaign
  */
 
-public class LoadCampaignActivity extends AppCompatActivity {
+public class LoadCampaignActivity extends BaseActivity {
 
     private static GlobalVariables globalVariables;
     private static CampaignsListAdapter campaignsListAdapter;
