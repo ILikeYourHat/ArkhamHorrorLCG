@@ -4,10 +4,7 @@
 
     <style name="MenuScreen">
         <item name="android:background">@drawable/main_menu_bg</item>
-        <item name="android:paddingTop">32dp</item>
-        <item name="android:paddingStart">16dp</item>
-        <item name="android:paddingEnd">16dp</item>
-        <item name="android:paddingBottom">16dp</item>
+        <item name="android:padding">@dimen/activity_vertical_margin</item>
     </style>
 
     <style name="ArkhamButton">
@@ -21,6 +18,11 @@
     </style>
 
     <style name="ArkhamButton.Small">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">55dp</item>
+    </style>
+
+    <style name="ArkhamButton.VerySmall">
         <item name="android:layout_width">120dp</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:textSize">18sp</item>

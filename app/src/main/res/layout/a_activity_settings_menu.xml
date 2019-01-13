@@ -14,13 +14,12 @@
         android:id="@+id/expansions_owned_button"
         style="@style/ArkhamButton"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="@string/expansions_owned" />
 
     <Button
         android:id="@+id/language_button"
         style="@style/ArkhamButton"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/language" />
 
     <Space
@@ -30,8 +29,9 @@
 
     <Button
         android:id="@+id/back_button"
-        style="@style/ArkhamButton.Small"
+        style="@style/ArkhamButton.VerySmall"
         android:layout_gravity="start"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:text="@string/back" />
 
 </LinearLayout>
