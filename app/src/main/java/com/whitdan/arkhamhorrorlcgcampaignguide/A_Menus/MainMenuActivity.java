@@ -14,6 +14,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.settings.SettingsMenuActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.D_Misc.ChaosBagActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;

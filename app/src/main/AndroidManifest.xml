@@ -83,7 +83,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".A_Menus.SettingsMenuActivity"
+            android:name=".A_Menus.settings.SettingsMenuActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
