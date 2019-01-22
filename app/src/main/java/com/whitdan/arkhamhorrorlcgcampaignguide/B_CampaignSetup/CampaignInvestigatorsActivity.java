@@ -27,6 +27,7 @@ import android.widget.Toast;
 
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
+import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.chaosbag.ChaosBagSetupActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioInterludeActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioMainActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.E_EditMisc.ChooseSuppliesActivity;
@@ -40,7 +41,6 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.InvestigatorCard;
 
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;

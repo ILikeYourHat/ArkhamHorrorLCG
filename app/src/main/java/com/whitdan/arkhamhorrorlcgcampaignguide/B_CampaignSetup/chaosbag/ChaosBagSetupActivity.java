@@ -1,4 +1,4 @@
-package com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup;
+package com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.chaosbag;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -21,8 +21,6 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import static android.view.View.GONE;
 
@@ -101,12 +99,7 @@ public class ChaosBagSetupActivity extends BaseActivity {
         // Back button
         Button backButton = findViewById(R.id.back_button);
         backButton.setTypeface(teutonic);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        backButton.setOnClickListener(view -> finish());
     }
 
     // Listener for the difficulty checkboxes to set the difficulty and refresh the chaosbag when done
@@ -192,32 +185,32 @@ public class ChaosBagSetupActivity extends BaseActivity {
             case 1:
                 switch (globalVariables.CurrentDifficulty) {
                     case 0:
-                        bag = new int[]{0, 2, 3, 3, 2, 0, 0, 0, 0, 0, 0, 2, 1, 1, 0, 1, 1};
+                        bag = ChaosBagPresets.ZEALOT_EASY.get();
                         break;
                     case 1:
-                        bag = new int[]{0, 1, 2, 3, 2, 1, 1, 0, 0, 0, 0, 2, 1, 1, 0, 1, 1};
+                        bag = ChaosBagPresets.ZEALOT_MEDIUM.get();
                         break;
                     case 2:
-                        bag = new int[]{0, 0, 3, 2, 2, 2, 1, 1, 0, 0, 0, 2, 1, 1, 0, 1, 1};
+                        bag = ChaosBagPresets.ZEALOT_HARD.get();
                         break;
                     case 3:
-                        bag = new int[]{0, 0, 1, 2, 2, 2, 2, 1, 1, 0, 1, 2, 1, 1, 0, 1, 1};
+                        bag = ChaosBagPresets.ZEALOT_EXPERT.get();
                 }
                 break;
             // Dunwich Legacy
             case 2:
                 switch (globalVariables.CurrentDifficulty) {
                     case 0:
-                        bag = new int[]{0, 2, 3, 3, 2, 0, 0, 0, 0, 0, 0, 2, 1, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.DUNWICH_EASY.get();
                         break;
                     case 1:
-                        bag = new int[]{0, 1, 2, 3, 2, 1, 1, 0, 0, 0, 0, 2, 1, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.DUNWICH_MEDIUM.get();
                         break;
                     case 2:
-                        bag = new int[]{0, 0, 3, 2, 2, 2, 1, 1, 0, 0, 0, 2, 1, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.DUNWICH_HARD.get();
                         break;
                     case 3:
-                        bag = new int[]{0, 0, 1, 2, 2, 2, 2, 1, 1, 0, 1, 2, 1, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.DUNWICH_EXPERT.get();
                         break;
                 }
                 break;
@@ -225,16 +218,16 @@ public class ChaosBagSetupActivity extends BaseActivity {
             case 3:
                 switch (globalVariables.CurrentDifficulty) {
                     case 0:
-                        bag = new int[]{0, 2, 3, 3, 2, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.CARCOSA_EASY.get();
                         break;
                     case 1:
-                        bag = new int[]{0, 1, 2, 3, 2, 1, 1, 0, 0, 0, 0, 3, 0, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.CARCOSA_MEDIUM.get();
                         break;
                     case 2:
-                        bag = new int[]{0, 0, 3, 2, 2, 2, 1, 1, 0, 0, 0, 3, 0, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.CARCOSA_HARD.get();
                         break;
                     case 3:
-                        bag = new int[]{0, 0, 1, 2, 2, 2, 2, 1, 1, 0, 1, 3, 0, 0, 0, 1, 1};
+                        bag = ChaosBagPresets.CARCOSA_EXPERT.get();
                         break;
                 }
                 break;
@@ -242,16 +235,16 @@ public class ChaosBagSetupActivity extends BaseActivity {
             case 4:
                 switch (globalVariables.CurrentDifficulty) {
                     case 0:
-                        bag = new int[]{0, 2, 3, 2, 1, 1, 0, 0, 0, 0, 0, 2, 0, 0, 1, 1, 1};
+                        bag = ChaosBagPresets.FORGOTTEN_AGE_EASY.get();
                         break;
                     case 1:
-                        bag = new int[]{0, 1, 3, 1, 2, 1, 0, 1, 0, 0, 0, 2, 0, 0, 1, 1, 1};
+                        bag = ChaosBagPresets.FORGOTTEN_AGE_MEDIUM.get();
                         break;
                     case 2:
-                        bag = new int[]{0, 1, 2, 1, 1, 2, 1, 0, 1, 0, 0, 2, 0, 0, 1, 1, 1};
+                        bag = ChaosBagPresets.FORGOTTEN_AGE_HARD.get();
                         break;
                     case 3:
-                        bag = new int[]{0, 0, 1, 1, 2, 2, 2, 0, 1, 0, 1, 2, 0, 0, 1, 1, 1};
+                        bag = ChaosBagPresets.FORGOTTEN_AGE_EXPERT.get();
                         break;
                 }
                 break;
@@ -262,10 +255,10 @@ public class ChaosBagSetupActivity extends BaseActivity {
                 case 101:
                     switch (globalVariables.CurrentDifficulty) {
                         case 1:
-                            bag = new int[]{0, 2, 3, 3, 2, 2, 2, 1, 1, 0, 0, 2, 2, 1, 1, 1, 1};
+                            bag = ChaosBagPresets.ROUGAROU_MEDIUM.get();
                             break;
                         case 2:
-                            bag = new int[]{0, 1, 3, 3, 2, 2, 2, 2, 1, 0, 1, 3, 2, 1, 1, 1, 1};
+                            bag = ChaosBagPresets.ROUGAROU_HARD.get();
                             break;
                     }
                     break;
@@ -273,10 +266,10 @@ public class ChaosBagSetupActivity extends BaseActivity {
                 case 102:
                     switch (globalVariables.CurrentDifficulty) {
                         case 1:
-                            bag = new int[]{0, 1, 3, 3, 1, 1, 1, 0, 1, 0, 0, 3, 1, 1, 1, 1, 1};
+                            bag = ChaosBagPresets.ROUGAROU_MEDIUM.get();
                             break;
                         case 2:
-                            bag = new int[]{0, 1, 3, 2, 0, 1, 1, 1, 1, 1, 0, 3, 1, 1, 1, 1, 1};
+                            bag = ChaosBagPresets.ROUGAROU_HARD.get();
                             break;
                     }
                     break;
