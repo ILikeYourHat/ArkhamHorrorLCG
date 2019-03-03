@@ -29,4 +29,13 @@
         <item name="android:includeFontPadding">false</item>
     </style>
 
+    <style name="ArkhamRadioButton">
+        <item name="android:padding">@dimen/checkbox_padding</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/arnopro_textsize</item>
+        <item name="android:fontFamily">@font/arnopro</item>
+        <item name="android:button">@drawable/checkbox_style</item>
+        <item name="android:layout_gravity">bottom|start</item>
+    </style>
+
 </resources>

@@ -3,9 +3,17 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data;
 import android.app.Application;
 import android.widget.TextView;
 
+import androidx.annotation.StringRes;
+
+import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.chaosbag.ChaosBag;
+import com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.chaosbag.ChaosBagPresets;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /*
     GlobalVariables - Contains all the variables which need to persist between activities
@@ -21,7 +29,7 @@ public class GlobalVariables extends Application {
     public long ChaosBagID;                        // Corresponds to SQLite database for chaos bag (-1 = default)
     public int CampaignVersion;                    // 1 = Original, 2 = added total XP)
     public int CurrentCampaign;                    // 1 = Night, 2 = Dunwich, 3 = Carcosa, 999 = standalone,
-                                                    // 1000 = standalone chaos bag
+    // 1000 = standalone chaos bag
     public int CurrentScenario;                    // 0 = campaign setup, >100 = standalone, 1000 = between campaigns
     public int CurrentDifficulty;                  // 0 = easy, 1 = normal, 2 = hard, 3 = expert (except standalones)
     public String Notes;
@@ -46,8 +54,8 @@ public class GlobalVariables extends Application {
     public String[] PlayerNames = new String[4];
     public String[] DeckNames = new String[4];
     public String[] DeckLists = new String[4];
-    public int[] InvestigatorsInUse = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-                                                                        // Matches up to the names in the string array
+    public int[] InvestigatorsInUse = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    // Matches up to the names in the string array
 
     /*
         Night of the Zealot variables - All of the variables associated with the Night of the Zealot campaign
@@ -165,7 +173,7 @@ public class GlobalVariables extends Application {
     /*
         Method for each scenario to set its title
      */
-    public void setTitle(TextView title){
+    public void setTitle(TextView title) {
         switch (CurrentCampaign) {
             case 1:
                 switch (CurrentScenario) {
@@ -267,7 +275,7 @@ public class GlobalVariables extends Application {
                 }
                 break;
             case 4:
-                switch(CurrentScenario){
+                switch (CurrentScenario) {
                     case 1:
                         title.setText(R.string.forgotten_scenario_one);
                         break;
@@ -335,4 +343,115 @@ public class GlobalVariables extends Application {
             }
         }
     }
+
+    @StringRes
+    public int getCurrentScenarioName() {
+        switch (CurrentCampaign) {
+            case 1:
+                return R.string.night_campaign;
+            case 2:
+                return R.string.dunwich_campaign;
+            case 3:
+                return R.string.carcosa_campaign;
+            case 4:
+                return R.string.forgotten_campaign;
+            default:
+                return 0;
+        }
+    }
+
+    public ChaosBag getCurrentBag() {
+        switch (CurrentCampaign) {
+            // Night of the Zealot
+            case 1:
+                switch (CurrentDifficulty) {
+                    case 0:
+                        return ChaosBagPresets.ZEALOT_EASY;
+                    case 1:
+                        return ChaosBagPresets.ZEALOT_MEDIUM;
+                    case 2:
+                        return ChaosBagPresets.ZEALOT_HARD;
+                    case 3:
+                        return ChaosBagPresets.ZEALOT_EXPERT;
+                    default:
+                        return ChaosBagPresets.EMPTY;
+                }
+                // Dunwich Legacy
+            case 2:
+                switch (CurrentDifficulty) {
+                    case 0:
+                        return ChaosBagPresets.DUNWICH_EASY;
+                    case 1:
+                        return ChaosBagPresets.DUNWICH_MEDIUM;
+                    case 2:
+                        return ChaosBagPresets.DUNWICH_HARD;
+                    case 3:
+                        return ChaosBagPresets.DUNWICH_EXPERT;
+                    default:
+                        return ChaosBagPresets.EMPTY;
+                }
+                // Path to Carcosa
+            case 3:
+                switch (CurrentDifficulty) {
+                    case 0:
+                        return ChaosBagPresets.CARCOSA_EASY;
+                    case 1:
+                        return ChaosBagPresets.CARCOSA_MEDIUM;
+                    case 2:
+                        return ChaosBagPresets.CARCOSA_HARD;
+                    case 3:
+                        return ChaosBagPresets.CARCOSA_EXPERT;
+                    default:
+                        return ChaosBagPresets.EMPTY;
+                }
+                // The Forgotten Age
+            case 4:
+                switch (CurrentDifficulty) {
+                    case 0:
+                        return ChaosBagPresets.FORGOTTEN_AGE_EASY;
+                    case 1:
+                        return ChaosBagPresets.FORGOTTEN_AGE_MEDIUM;
+                    case 2:
+                        return ChaosBagPresets.FORGOTTEN_AGE_HARD;
+                    case 3:
+                        return ChaosBagPresets.FORGOTTEN_AGE_EXPERT;
+                    default:
+                        return ChaosBagPresets.EMPTY;
+                }
+        }
+        if (CurrentCampaign == 999) {
+            switch (CurrentScenario) {
+                // Curse of the Rougarou
+                case 101:
+                    switch (CurrentDifficulty) {
+                        case 1:
+                            return ChaosBagPresets.ROUGAROU_MEDIUM;
+                        case 2:
+                            return ChaosBagPresets.ROUGAROU_HARD;
+                        default:
+                            return ChaosBagPresets.EMPTY;
+                    }
+                    // Carnevale of Horrors
+                case 102:
+                    switch (CurrentDifficulty) {
+                        case 1:
+                            return ChaosBagPresets.CARNEVALE_MEDIUM;
+                        case 2:
+                            return ChaosBagPresets.CARNEVALE_HARD;
+                        default:
+                            return ChaosBagPresets.EMPTY;
+                    }
+            }
+        }
+        return ChaosBagPresets.EMPTY;
+    }
+
+    public List<Difficulty> getAvailableDifficulties() {
+        if (CurrentCampaign == 999) {
+            return Arrays.asList(Difficulty.STANDARD, Difficulty.HARD);
+        } else {
+            return Arrays.asList(Difficulty.EASY, Difficulty.STANDARD, Difficulty.HARD, Difficulty.EXPERT);
+        }
+    }
+
 }

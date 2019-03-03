@@ -1,28 +1,20 @@
 package com.whitdan.arkhamhorrorlcgcampaignguide.B_CampaignSetup.chaosbag;
 
-import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.MainMenuActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
-import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
+import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.Difficulty;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.List;
 
-import static android.view.View.GONE;
+import butterknife.BindView;
+import butterknife.OnClick;
 
 /*
     ChaosBagSetupActivity - Allows the selection of a difficulty and shows the makeup of the chaos bag relevant to
@@ -31,250 +23,93 @@ import static android.view.View.GONE;
 
 public class ChaosBagSetupActivity extends BaseActivity {
 
-    GlobalVariables globalVariables;
-    ArrayList<Integer> chaosbag;
+    @BindView(R.id.campaign_name)
+    TextView tvCampaignName;
+    @BindView(R.id.rvChaosTokens)
+    RecyclerView rvChaosTokens;
+    @BindView(R.id.easy_button)
+    RadioButton btnEasy;
+    @BindView(R.id.standard_button)
+    RadioButton btnStandard;
+    @BindView(R.id.hard_button)
+    RadioButton btnHard;
+    @BindView(R.id.expert_button)
+    RadioButton btnExpert;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        // If app is reopening after the process is killed, kick back to the main menu (stops the activity from
-        // showing up unpopulated)
-        if (savedInstanceState != null) {
-            Intent intent = new Intent(ChaosBagSetupActivity.this, MainMenuActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            finish();
-        }
-
+        restartAppIfActivityRecreated(savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.b_activity_chaos_bag_setup);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        globalVariables = (GlobalVariables) this.getApplication();
 
-        // Set campaign title and fonts
-        Typeface teutonic = Typeface.createFromAsset(getAssets(), "fonts/teutonic.ttf");
-        Typeface arnopro = Typeface.createFromAsset(getAssets(), "fonts/arnopro.otf");
-        TextView title = findViewById(R.id.campaign_name);
-        title.setTypeface(teutonic);
-        switch (globalVariables.CurrentCampaign) {
-            case 1:
-                title.setText(R.string.night_campaign);
-                break;
-            case 2:
-                title.setText(R.string.dunwich_campaign);
-                break;
-            case 3:
-                title.setText(R.string.carcosa_campaign);
-                break;
-            case 4:
-                title.setText(R.string.forgotten_campaign);
-                break;
-        }
-        TextView chaosBag = findViewById(R.id.chaos_bag);
-        chaosBag.setTypeface(teutonic);
-
-        // Set fonts and listeners to radio buttons
-        RadioGroup difficulty = findViewById(R.id.difficulty_selection);
-        for (int i = 0; i < difficulty.getChildCount(); i++) {
-            View view = difficulty.getChildAt(i);
-            if (view instanceof RadioButton) {
-                ((RadioButton) view).setTypeface(arnopro);
-                view.setOnClickListener(new difficultySelectionListener());
-
-                if (i == globalVariables.CurrentDifficulty) {
-                    ((RadioButton) view).setChecked(true);
-                    setupBag();
-                }
-            }
-        }
-
-        // Hide relevant radiobuttons on standalone scenarios
-        RadioButton easy = findViewById(R.id.easy_button);
-        RadioButton expert = findViewById(R.id.expert_button);
-        if (globalVariables.CurrentCampaign == 999) {
-            easy.setVisibility(GONE);
-            expert.setVisibility(GONE);
-        }
-
-        // Back button
-        Button backButton = findViewById(R.id.back_button);
-        backButton.setTypeface(teutonic);
-        backButton.setOnClickListener(view -> finish());
+        tvCampaignName.setText(globalVariables.getCurrentScenarioName());
+        initDifficulties();
+        refreshBag();
     }
 
-    // Listener for the difficulty checkboxes to set the difficulty and refresh the chaosbag when done
-    private class difficultySelectionListener implements View.OnClickListener {
-
-        @Override
-        public void onClick(View view) {
-            switch (view.getId()) {
-                case R.id.easy_button:
-                    globalVariables.CurrentDifficulty = 0;
-                    break;
-                case R.id.standard_button:
-                    globalVariables.CurrentDifficulty = 1;
-                    break;
-                case R.id.hard_button:
-                    globalVariables.CurrentDifficulty = 2;
-                    break;
-                case R.id.expert_button:
-                    globalVariables.CurrentDifficulty = 3;
-                    break;
-            }
-            setupBag();
-        }
+    @OnClick(value = {
+            R.id.easy_button,
+            R.id.standard_button,
+            R.id.hard_button,
+            R.id.expert_button
+    })
+    void onDifficultyClicked(View v) {
+        Difficulty difficulty = viewToDifficulty(v);
+        globalVariables.CurrentDifficulty = difficulty.getId();
+        refreshBag();
     }
 
-    private void setupBag() {
-        // Setup chaos bag by adding relevant tokens
-        chaosbag = new ArrayList<>();
-        for (int i = 0; i < 17; i++) {
-            for (int j = 0; j < basebag()[i]; j++) {
-                chaosbag.add(i);
-            }
-        }
+    @OnClick(R.id.back_button)
+    void onBackButtonClicked() {
+        finish();
+    }
 
-        // Get relevant views
-        Collections.sort(chaosbag);
-        LinearLayout currentChaosBagOne = findViewById(R.id.current_chaos_bag_one);
-        LinearLayout currentChaosBagTwo = findViewById(R.id.current_chaos_bag_two);
-        LinearLayout currentChaosBagThree = findViewById(R.id.current_chaos_bag_three);
-        LinearLayout currentChaosBagFour = findViewById(R.id.current_chaos_bag_four);
-        LinearLayout currentChaosBagFive = findViewById(R.id.current_chaos_bag_five);
-        LinearLayout currentChaosBagSix = findViewById(R.id.current_chaos_bag_six);
-        currentChaosBagOne.removeAllViews();
-        currentChaosBagTwo.removeAllViews();
-        currentChaosBagThree.removeAllViews();
-        currentChaosBagFour.removeAllViews();
-        currentChaosBagFive.removeAllViews();
-        currentChaosBagSix.removeAllViews();
-
-        // Adds views for every chaos token to the relevant layouts
-        for (int i = 0; i < chaosbag.size(); i++) {
-            int currentToken = chaosbag.get(i);
-            ImageView tokenView = new ImageView(this);
-            int height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources()
-                    .getDisplayMetrics());
-            int width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 40, getResources()
-                    .getDisplayMetrics());
-            tokenView.setLayoutParams(new ViewGroup.LayoutParams(width, height));
-            int tokenId = getResources().getIdentifier("drawable/token_" + currentToken, null, getPackageName());
-            tokenView.setImageResource(tokenId);
-
-            if (currentChaosBagOne.getChildCount() < 5) {
-                currentChaosBagOne.addView(tokenView);
-            } else if (currentChaosBagTwo.getChildCount() < 5) {
-                currentChaosBagTwo.addView(tokenView);
-            } else if (currentChaosBagThree.getChildCount() < 5) {
-                currentChaosBagThree.addView(tokenView);
-            } else if (currentChaosBagFour.getChildCount() < 5) {
-                currentChaosBagFour.addView(tokenView);
-            } else if (currentChaosBagFive.getChildCount() < 5) {
-                currentChaosBagFive.addView(tokenView);
+    private void initDifficulties() {
+        List<Difficulty> availableDifficulties = globalVariables.getAvailableDifficulties();
+        for (Difficulty difficulty : Difficulty.values()) {
+            RadioButton btn = difficultyToView(difficulty);
+            if (availableDifficulties.contains(difficulty)) {
+                btn.setVisibility(View.VISIBLE);
+                btn.setChecked(difficulty.getId() == globalVariables.CurrentDifficulty);
             } else {
-                currentChaosBagSix.addView(tokenView);
+                btn.setVisibility(View.GONE);
+                btn.setChecked(false);
             }
         }
     }
 
-    // Difficulties
-    private int[] basebag() {
-        int[] bag = new int[17];
-        switch (globalVariables.CurrentCampaign) {
-            // Night of the Zealot
-            case 1:
-                switch (globalVariables.CurrentDifficulty) {
-                    case 0:
-                        bag = ChaosBagPresets.ZEALOT_EASY.get();
-                        break;
-                    case 1:
-                        bag = ChaosBagPresets.ZEALOT_MEDIUM.get();
-                        break;
-                    case 2:
-                        bag = ChaosBagPresets.ZEALOT_HARD.get();
-                        break;
-                    case 3:
-                        bag = ChaosBagPresets.ZEALOT_EXPERT.get();
-                }
-                break;
-            // Dunwich Legacy
-            case 2:
-                switch (globalVariables.CurrentDifficulty) {
-                    case 0:
-                        bag = ChaosBagPresets.DUNWICH_EASY.get();
-                        break;
-                    case 1:
-                        bag = ChaosBagPresets.DUNWICH_MEDIUM.get();
-                        break;
-                    case 2:
-                        bag = ChaosBagPresets.DUNWICH_HARD.get();
-                        break;
-                    case 3:
-                        bag = ChaosBagPresets.DUNWICH_EXPERT.get();
-                        break;
-                }
-                break;
-            // Path to Carcosa
-            case 3:
-                switch (globalVariables.CurrentDifficulty) {
-                    case 0:
-                        bag = ChaosBagPresets.CARCOSA_EASY.get();
-                        break;
-                    case 1:
-                        bag = ChaosBagPresets.CARCOSA_MEDIUM.get();
-                        break;
-                    case 2:
-                        bag = ChaosBagPresets.CARCOSA_HARD.get();
-                        break;
-                    case 3:
-                        bag = ChaosBagPresets.CARCOSA_EXPERT.get();
-                        break;
-                }
-                break;
-            // The Forgotten Age
-            case 4:
-                switch (globalVariables.CurrentDifficulty) {
-                    case 0:
-                        bag = ChaosBagPresets.FORGOTTEN_AGE_EASY.get();
-                        break;
-                    case 1:
-                        bag = ChaosBagPresets.FORGOTTEN_AGE_MEDIUM.get();
-                        break;
-                    case 2:
-                        bag = ChaosBagPresets.FORGOTTEN_AGE_HARD.get();
-                        break;
-                    case 3:
-                        bag = ChaosBagPresets.FORGOTTEN_AGE_EXPERT.get();
-                        break;
-                }
-                break;
+    private void refreshBag() {
+        ChaosBag bag = globalVariables.getCurrentBag();
+        rvChaosTokens.setAdapter(new ChaosTokensAdapter(bag.getTokens()));
+    }
+
+    private Difficulty viewToDifficulty(View view) {
+        switch (view.getId()) {
+            case (R.id.easy_button):
+                return Difficulty.EASY;
+            case (R.id.standard_button):
+                return Difficulty.STANDARD;
+            case (R.id.hard_button):
+                return Difficulty.HARD;
+            case (R.id.expert_button):
+                return Difficulty.EXPERT;
+            default:
+                throw new IllegalArgumentException();
         }
-        if (globalVariables.CurrentCampaign == 999) {
-            switch (globalVariables.CurrentScenario) {
-                // Curse of the Rougarou
-                case 101:
-                    switch (globalVariables.CurrentDifficulty) {
-                        case 1:
-                            bag = ChaosBagPresets.ROUGAROU_MEDIUM.get();
-                            break;
-                        case 2:
-                            bag = ChaosBagPresets.ROUGAROU_HARD.get();
-                            break;
-                    }
-                    break;
-                // Carnevale of Horrors
-                case 102:
-                    switch (globalVariables.CurrentDifficulty) {
-                        case 1:
-                            bag = ChaosBagPresets.ROUGAROU_MEDIUM.get();
-                            break;
-                        case 2:
-                            bag = ChaosBagPresets.ROUGAROU_HARD.get();
-                            break;
-                    }
-                    break;
-            }
+    }
+
+    private RadioButton difficultyToView(Difficulty difficulty) {
+        switch (difficulty) {
+            case EASY:
+                return btnEasy;
+            case STANDARD:
+                return btnStandard;
+            case HARD:
+                return btnHard;
+            case EXPERT:
+                return btnExpert;
+            default:
+                throw new IllegalArgumentException();
         }
-        return bag;
     }
 }

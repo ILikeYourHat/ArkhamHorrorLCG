@@ -7,13 +7,16 @@ public class ChaosBag {
 
     private List<ChaosBagToken> list = new ArrayList<>();
 
-    public int[] get() {
-        int[] table = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+    public List<Integer> get() {
+        List<Integer> tokens = new ArrayList<>();
         for (ChaosBagToken token : list) {
-            int index = token.ordinal() + 1;
-            table[index]++;
+            tokens.add(token.ordinal() + 1);
         }
-        return table;
+        return tokens;
+    }
+
+    public List<ChaosBagToken> getTokens() {
+        return new ArrayList<>(list);
     }
 
     public static class Builder {

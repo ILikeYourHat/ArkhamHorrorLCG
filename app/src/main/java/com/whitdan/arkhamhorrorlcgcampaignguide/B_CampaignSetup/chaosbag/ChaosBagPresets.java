@@ -281,4 +281,5 @@ public class ChaosBagPresets {
             .add(ELDER_SIGN, 1)
             .build();
 
+    public static final ChaosBag EMPTY = new ChaosBag.Builder().build();
 }
