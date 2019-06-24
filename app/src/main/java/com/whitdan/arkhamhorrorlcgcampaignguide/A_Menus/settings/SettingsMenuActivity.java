@@ -2,6 +2,7 @@ package com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.settings;
 
 import android.os.Bundle;
 
+import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.expansion.ExpansionsDialog;
 import com.whitdan.arkhamhorrorlcgcampaignguide.A_Menus.utils.BaseActivity;
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 
@@ -17,12 +18,12 @@ public class SettingsMenuActivity extends BaseActivity {
 
     @OnClick(R.id.expansions_owned_button)
     void onExpansionsOwnedButtonClicked() {
-        new ExpansionsDialog().show(getFragmentManager(), "expansions");
+        new ExpansionsDialog().show(getSupportFragmentManager(), "expansions");
     }
 
     @OnClick(R.id.language_button)
     void onLanguageButtonClicked() {
-        new LanguageDialog().show(getFragmentManager(), "languages");
+        new LanguageDialog().show(getSupportFragmentManager(), "languages");
     }
 
     @OnClick(R.id.back_button)
