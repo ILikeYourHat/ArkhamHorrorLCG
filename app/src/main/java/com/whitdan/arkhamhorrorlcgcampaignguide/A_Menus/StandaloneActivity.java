@@ -11,8 +11,6 @@ import com.whitdan.arkhamhorrorlcgcampaignguide.C_Scenario.ScenarioIntroductionA
 import com.whitdan.arkhamhorrorlcgcampaignguide.R;
 import com.whitdan.arkhamhorrorlcgcampaignguide.Z_Data.GlobalVariables;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 public class StandaloneActivity extends BaseActivity {
 
     GlobalVariables globalVariables;
